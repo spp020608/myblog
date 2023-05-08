@@ -46,7 +46,8 @@ func setupApiRouter(r *gin.Engine) {
 	{
 		userGroup.POST("/register", api.UserApi.Register)
 		userGroup.POST("/login", api.UserApi.Login)
-		userGroup.POST("/updatePassword",api.UserApi.UpdatePassword)
-		userGroup.POST("/updateUser",api.UserApi.UpdateUser)
+		userGroup.POST("/updatePassword", api.UserApi.UpdatePassword)
+		userGroup.POST("/updateUser", api.UserApi.UpdateUser)
+		userGroup.POST("/delUser", api.UserApi.DelUser)
 	}
 }

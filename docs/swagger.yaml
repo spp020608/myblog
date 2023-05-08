@@ -571,6 +571,46 @@ paths:
       summary: 最简单的 POST 请求, 前端不传递任何参数
       tags:
       - exampleApi
+  /user/delUser:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      parameters:
+      - description: 要注销的用户名
+        in: formData
+        maxLength: 20
+        minLength: 1
+        name: username
+        type: string
+      - description: 密码
+        in: formData
+        maxLength: 128
+        minLength: 1
+        name: password
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      tags:
+      - userApi
   /user/login:
     post:
       consumes:

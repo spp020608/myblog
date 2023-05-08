@@ -148,7 +148,7 @@ func (userService) Login(loginInfo *dto.LoginInfo) (token string, err error) {
 
 // UpdatePassword 修改密码
 //
-//	@parameter	loginInfo 前端传递的登录信息
+//	@parameter	updatePassword 前端传递的登录信息
 //	@return		rowAffected
 //	@return		err
 func (userService) UpdatePassword(updatePassword *dto.UpdatePassword) (rowsAffected int64, err error) {
@@ -192,13 +192,13 @@ func (userService) UpdatePassword(updatePassword *dto.UpdatePassword) (rowsAffec
 	return 0, nil
 }
 
-// UpdateUser 修改密码
+// UpdateUser 修改用户信息
 //
 //	@parameter	User 前端传递的登录信息
-//	@return		rowAffected
+//	@return		string
 //	@return		err
 func (userService) UpdateUser(user *dto.User) (s string, err error) {
-	zap.S().Info("用户修改的信息为:" , user)
+	zap.S().Info("用户修改的信息为:", user)
 
 	hashedPassword, err := util.GenerateFromPassword(user.Password)
 	if err != nil {
@@ -215,5 +215,28 @@ func (userService) UpdateUser(user *dto.User) (s string, err error) {
 		zap.L().Info(err.Error())
 		return "", err
 	}
-	return "更新成功",nil
+	return "更新成功", nil
+}
+
+// DelUser 注销用户
+//
+//	@parameter	loginInfo 前端传递的登录信息
+//	@return		rowAffected
+//	@return		err
+func (userService) DelUser(info *dto.LoginInfo) (rowsAffected int64, err error) {
+	zap.L().Info("要注销的用户为:" + info.Username)
+	first, err := query.User.Where(query.User.Username.Eq(info.Username), query.User.Password.Eq(info.Password)).First()
+	if err != nil {
+		zap.S().Errorf("注销用户验证用户名&密码出先错误" + err.Error())
+	}
+	if first == nil {
+		zap.S().Info("查询的用户为空")
+		return 0, nil
+	} else {
+		first.IsDelete = 1
+		query.User.Save(first)
+		zap.S().Infof("用户注销成功")
+		rowsAffected = 1
+	}
+	return rowsAffected, nil
 }

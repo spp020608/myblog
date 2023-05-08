@@ -777,6 +777,65 @@
                 }
             }
         },
+        "/user/delUser": {
+            "post": {
+                "description": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "userApi"
+                ],
+                "summary": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",
+                "parameters": [
+                    {
+                        "maxLength": 20,
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "要注销的用户名",
+                        "name": "username",
+                        "in": "formData"
+                    },
+                    {
+                        "maxLength": 128,
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "密码",
+                        "name": "password",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
         "/user/login": {
             "post": {
                 "description": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",

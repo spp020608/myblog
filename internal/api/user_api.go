@@ -148,10 +148,41 @@ func (userApi) UpdateUser(c *gin.Context) {
 		zap.S().Errorf("用户修改信息失败: %s\n", translatedErr)
 		return
 	}
-	zap.S().Info("传进来的信息为",user)
+	zap.S().Info("传进来的信息为", user)
 	updateUser, err := service.UserService.UpdateUser(&user)
 	if err != nil {
 		zap.S().Errorf("用户修改信息失败: %s\n", err)
 	}
 	resp.Ok(c, "更新用户成功", updateUser)
+}
+
+// DelUser 用户注销
+//
+//	@Summary		Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+//	@Description	Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+//	@Tags			userApi
+//	@Accept			mpfd
+//	@Produce		json
+//	@Param			username	formData	string			false	"要注销的用户名"	minlength(1)	maxlength(20)
+//	@Param			password	formData	string			false	"密码"		minlength(1)	maxlength(128)
+//	@Success		200			{object}	swagger.HttpOk	"OK"
+//	@Failure		400			{object}	swagger.Http400	"Bad Request"
+//	@Failure		404			{object}	swagger.Http404	"Page Not Found"
+//	@Failure		500			{object}	swagger.Http500	"InternalError"
+//	@Router			/user/delUser [post]
+func (userApi) DelUser(c *gin.Context) {
+	var user dto.LoginInfo
+	if err := c.ShouldBind(&user); err != nil {
+		trans := validate.TranslateError(err)
+		zap.S().Errorf("绑定参数失败: %s\n", trans)
+		resp.InternalServerError(c, trans)
+		return
+	}
+	delUser, err := service.UserService.DelUser(&user)
+	if err != nil {
+		zap.S().Errorf("注销用户失败: %s\n", err)
+		resp.InternalServerError(c, "注销用户失败")
+		return
+	}
+	resp.Ok(c, "注销用户成功", delUser)
 }
