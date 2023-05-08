@@ -1,0 +1,34 @@
+# Web 服务器配置
+server:
+  port: 8080 # 端口
+
+# mysql 数据库相关配置
+mysql:
+  databaseName: myblog # 数据库名称
+  host: 127.0.0.1 # mysql 服务器 ip
+  port: 3306 # 端口
+  username: root # 登录用户名称
+  password: 123456 # 用户密码
+
+# zap 日志配置
+logging:
+  filename: ./logs/log.log # 日志文件存放路径
+  maxSize: 1 # 日志文件大小(单位:M)
+  maxBackups: 100 # 最大备份数量
+  maxAges: 30 # 最大保存期限(单位:天)
+  compress: true # 是否压缩
+  localTime: true # 是否使用本地时间命名日志文件的备份
+
+# redis 配置
+redis:
+  addr: 127.0.0.1:6379 # redis ip:port
+  password:  # redis 密码
+  timeout: 6000 # 连接超时时间
+  database: 0 # 使用的数据库
+
+jwt:
+  tokenHeader: Authorization # http 请求头的 key
+  secret: Yusheng # 生成 jwt token 时需要用到的
+  expire: 86400 # token 过期时长
+  tokenHead: Bearer # token
+
