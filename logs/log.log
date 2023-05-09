@@ -1940,3 +1940,446 @@ runtime.main
 [2023-05-08T21:01:37.830+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "8.7591ms"}
 [2023-05-08T21:02:05.279+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
 [2023-05-08T21:02:05.279+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-08T21:39:29.110+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-08T21:39:35.920+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "259.6µs"}
+[2023-05-08T21:39:35.966+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "837.2µs"}
+[2023-05-08T21:39:35.985+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.1868ms"}
+[2023-05-08T21:39:35.985+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "526.6µs"}
+[2023-05-08T21:39:36.215+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "983.7µs"}
+[2023-05-08T21:39:50.677+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "285.4µs"}
+[2023-05-08T21:39:51.354+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "1.0655ms"}
+[2023-05-08T21:40:11.159+0800]	[ INFO]	[   service/user_service.go:106]	用户登录前端传递过来的密码为: 20020608
+[2023-05-08T21:40:11.160+0800]	[ INFO]	[   service/user_service.go:124]	从数据库中获取的用户密码为:$2a$10$EGjoUoRuJLqquvyMnF0YbOX5ncNrx2RptW8ZHx1Cun5wTqTcrNLVe
+[2023-05-08T21:40:11.160+0800]	[ INFO]	[   service/user_service.go:125]	接收到的前端用户用户密码为:20020608
+[2023-05-08T21:40:19.474+0800]	[ERROR]	[             cache/redis.go:80]	redis set key: prj:login:user:syx err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/repository/cache.SaveLoginUser
+	C:/Users/86133/GolandProjects/myblog/internal/repository/cache/redis.go:80
+myblog/internal/service.userService.Login
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:142
+myblog/internal/api.userApi.Login
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:80
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-08T21:40:19.474+0800]	[ INFO]	[   service/user_service.go:143]	将登录用户存放到 redis 中失败: redis set key: prj:login:user:syx err: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+[2023-05-08T21:40:19.474+0800]	[ INFO]	[       middleware/logger.go:26]	/user/login	{"status": 200, "method": "POST", "path": "/user/login", "query": "", "ip": "::1", "errors": "", "cost": "8.3157112s"}
+[2023-05-08T21:42:59.746+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-08T21:42:59.746+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:01:58.125+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:02:15.056+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "260.8µs"}
+[2023-05-09T21:02:15.123+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "903.7µs"}
+[2023-05-09T21:02:15.129+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "525.2µs"}
+[2023-05-09T21:02:15.129+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.9296ms"}
+[2023-05-09T21:02:15.376+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "847.3µs"}
+[2023-05-09T21:03:50.380+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "909.4µs"}
+[2023-05-09T21:03:50.415+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:03:50.415+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:03:50.422+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:03:50.510+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "502.2µs"}
+[2023-05-09T21:03:50.516+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "271.8µs"}
+[2023-05-09T21:08:25.778+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:08:25.778+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:08:37.651+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:08:37.684+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "543.2µs"}
+[2023-05-09T21:08:37.717+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "487.3µs"}
+[2023-05-09T21:08:37.723+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "864.1µs"}
+[2023-05-09T21:08:37.725+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "511µs"}
+[2023-05-09T21:08:37.964+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "835.5µs"}
+[2023-05-09T21:08:38.073+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "817µs"}
+[2023-05-09T21:08:48.571+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-09T21:10:07.285+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:10:07.285+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:10:38.009+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:10:38.118+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:17:35.968+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:17:35.968+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:17:47.985+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:18:09.403+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:18:10.858+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:18:11.363+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:18:11.725+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:18:11.970+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:18:12.146+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:18:12.329+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:18:12.492+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:18:12.634+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "int=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:20:35.239+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:20:35.239+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:20:47.196+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:21:17.939+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:21:17.939+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:22:02.889+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:22:02.905+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "544.7µs"}
+[2023-05-09T21:22:02.942+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "302.9µs"}
+[2023-05-09T21:22:02.945+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "738.7µs"}
+[2023-05-09T21:22:02.949+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "520.1µs"}
+[2023-05-09T21:22:03.182+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "990µs"}
+[2023-05-09T21:22:03.382+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "971µs"}
+[2023-05-09T21:22:07.298+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:22:10.405+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:23:33.808+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:24:05.410+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:24:06.103+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:24:40.821+0800]	[ INFO]	[       middleware/logger.go:26]	/user/getAllBlog	{"status": 404, "method": "POST", "path": "/user/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:24:41.898+0800]	[ INFO]	[       middleware/logger.go:26]	/user/getAllBlog	{"status": 404, "method": "POST", "path": "/user/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:24:51.560+0800]	[ INFO]	[   service/user_service.go:221]	要注销的用户为:
+[2023-05-09T21:24:51.562+0800]	[ERROR]	[   service/user_service.go:224]	注销用户验证用户名&密码出先错误record not found
+myblog/internal/service.userService.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:224
+myblog/internal/api.userApi.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:181
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-09T21:24:51.562+0800]	[ INFO]	[   service/user_service.go:227]	查询的用户为空
+[2023-05-09T21:24:51.562+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "2.2985ms"}
+[2023-05-09T21:24:56.574+0800]	[ INFO]	[   service/user_service.go:221]	要注销的用户为:
+[2023-05-09T21:24:56.574+0800]	[ERROR]	[   service/user_service.go:224]	注销用户验证用户名&密码出先错误record not found
+myblog/internal/service.userService.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:224
+myblog/internal/api.userApi.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:181
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-09T21:24:56.575+0800]	[ INFO]	[   service/user_service.go:227]	查询的用户为空
+[2023-05-09T21:24:56.575+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "611.7µs"}
+[2023-05-09T21:24:57.133+0800]	[ INFO]	[   service/user_service.go:221]	要注销的用户为:
+[2023-05-09T21:24:57.133+0800]	[ERROR]	[   service/user_service.go:224]	注销用户验证用户名&密码出先错误record not found
+myblog/internal/service.userService.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:224
+myblog/internal/api.userApi.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:181
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-09T21:24:57.133+0800]	[ INFO]	[   service/user_service.go:227]	查询的用户为空
+[2023-05-09T21:24:57.134+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "799.9µs"}
+[2023-05-09T21:24:57.522+0800]	[ INFO]	[   service/user_service.go:221]	要注销的用户为:
+[2023-05-09T21:24:57.523+0800]	[ERROR]	[   service/user_service.go:224]	注销用户验证用户名&密码出先错误record not found
+myblog/internal/service.userService.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:224
+myblog/internal/api.userApi.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:181
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-09T21:24:57.523+0800]	[ INFO]	[   service/user_service.go:227]	查询的用户为空
+[2023-05-09T21:24:57.523+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "1.4734ms"}
+[2023-05-09T21:24:57.988+0800]	[ INFO]	[   service/user_service.go:221]	要注销的用户为:
+[2023-05-09T21:24:57.989+0800]	[ERROR]	[   service/user_service.go:224]	注销用户验证用户名&密码出先错误record not found
+myblog/internal/service.userService.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:224
+myblog/internal/api.userApi.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:181
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-09T21:24:57.989+0800]	[ INFO]	[   service/user_service.go:227]	查询的用户为空
+[2023-05-09T21:24:57.989+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "1.3822ms"}
+[2023-05-09T21:24:58.359+0800]	[ INFO]	[   service/user_service.go:221]	要注销的用户为:
+[2023-05-09T21:24:58.360+0800]	[ERROR]	[   service/user_service.go:224]	注销用户验证用户名&密码出先错误record not found
+myblog/internal/service.userService.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:224
+myblog/internal/api.userApi.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:181
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-09T21:24:58.360+0800]	[ INFO]	[   service/user_service.go:227]	查询的用户为空
+[2023-05-09T21:24:58.360+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "1.3329ms"}
+[2023-05-09T21:24:59.505+0800]	[ INFO]	[   service/user_service.go:221]	要注销的用户为:
+[2023-05-09T21:24:59.505+0800]	[ERROR]	[   service/user_service.go:224]	注销用户验证用户名&密码出先错误record not found
+myblog/internal/service.userService.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:224
+myblog/internal/api.userApi.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:181
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-09T21:24:59.505+0800]	[ INFO]	[   service/user_service.go:227]	查询的用户为空
+[2023-05-09T21:24:59.505+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "393.6µs"}
+[2023-05-09T21:26:29.336+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 405, "method": "GET", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:26:31.014+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 405, "method": "GET", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:26:33.580+0800]	[ INFO]	[   service/user_service.go:221]	要注销的用户为:
+[2023-05-09T21:26:33.580+0800]	[ERROR]	[   service/user_service.go:224]	注销用户验证用户名&密码出先错误record not found
+myblog/internal/service.userService.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/service/user_service.go:224
+myblog/internal/api.userApi.DelUser
+	C:/Users/86133/GolandProjects/myblog/internal/api/user_api.go:181
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-09T21:26:33.581+0800]	[ INFO]	[   service/user_service.go:227]	查询的用户为空
+[2023-05-09T21:26:33.581+0800]	[ INFO]	[       middleware/logger.go:26]	/user/delUser	{"status": 200, "method": "POST", "path": "/user/delUser", "query": "", "ip": "::1", "errors": "", "cost": "1.071ms"}
+[2023-05-09T21:26:49.707+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:27:21.511+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:27:21.511+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:27:33.411+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:27:53.706+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:27:53.706+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:28:05.433+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:28:10.828+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "512.2µs"}
+[2023-05-09T21:28:10.891+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "69.7µs"}
+[2023-05-09T21:28:10.893+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "831.1µs"}
+[2023-05-09T21:28:10.894+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "512.9µs"}
+[2023-05-09T21:28:11.120+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "1.2154ms"}
+[2023-05-09T21:28:21.966+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 404, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:31:10.774+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:31:10.774+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:31:22.634+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:31:23.762+0800]	[ INFO]	[    service/blog_service.go:31]	开始逆序查询所有博客
+[2023-05-09T21:31:23.763+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T21:58:34.069+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:58:34.069+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:58:45.994+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:58:46.585+0800]	[ INFO]	[    service/blog_service.go:31]	开始逆序查询所有博客
+[2023-05-09T21:58:46.585+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "307.9µs"}
+[2023-05-09T21:59:04.197+0800]	[ INFO]	[    service/blog_service.go:31]	开始逆序查询所有博客
+[2023-05-09T21:59:04.198+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "532.2µs"}
+[2023-05-09T21:59:44.242+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T21:59:44.242+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T21:59:56.119+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T21:59:59.696+0800]	[ INFO]	[    service/blog_service.go:33]	开始逆序查询所有博客
+[2023-05-09T21:59:59.696+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "394.6µs"}
+[2023-05-09T22:00:37.854+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T22:00:37.854+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T22:00:49.679+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T22:01:40.957+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T22:01:40.957+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T22:01:52.916+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T22:01:55.908+0800]	[ INFO]	[    service/blog_service.go:33]	开始逆序查询所有博客
+[2023-05-09T22:01:55.908+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-09T22:02:27.119+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T22:02:27.119+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-09T22:02:38.985+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-09T22:02:50.226+0800]	[ INFO]	[    service/blog_service.go:33]	开始正序查询所有博客
+[2023-05-09T22:02:50.231+0800]	[ INFO]	[    service/blog_service.go:40]	查询所有博客成功
+[2023-05-09T22:02:50.231+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "4.8401ms"}
+[2023-05-09T22:06:20.380+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-09T22:06:20.380+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭

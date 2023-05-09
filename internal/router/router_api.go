@@ -50,4 +50,8 @@ func setupApiRouter(r *gin.Engine) {
 		userGroup.POST("/updateUser", api.UserApi.UpdateUser)
 		userGroup.POST("/delUser", api.UserApi.DelUser)
 	}
+	blogGroup := r.Group("/blog")
+	{
+		blogGroup.POST("/getAllBlog", api.BlogApi.GetAllBlog)
+	}
 }

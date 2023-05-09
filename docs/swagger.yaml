@@ -53,6 +53,40 @@ definitions:
 info:
   contact: {}
 paths:
+  /blog/getAllBlog:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      parameters:
+      - description: '规则: 正序为 1, 逆序为0'
+        in: query
+        maximum: 1
+        minimum: 1
+        name: sort
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      tags:
+      - userApi
   /example/getAuthorizationHeader:
     get:
       consumes:

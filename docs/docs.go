@@ -16,6 +16,57 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
+        "/blog/getAllBlog": {
+            "post": {
+                "description": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "userApi"
+                ],
+                "summary": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",
+                "parameters": [
+                    {
+                        "maximum": 1,
+                        "minimum": 1,
+                        "type": "integer",
+                        "description": "规则: 正序为 1, 逆序为0",
+                        "name": "sort",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
         "/example/getAuthorizationHeader": {
             "get": {
                 "description": "Get 请求, 请求参数是 URL 的一部分",

@@ -33,13 +33,6 @@ var UserService = &userService{}
 
 type userService struct{}
 
-/*
-1.用户注册前端传递到后端的数据必须包含如下信息︰用户名、密码、电话号码
-2.注册的时候需判断用户名是否重名
-3.验证前端传递的数据是否合法（比如:数据库中的username字段要求是长度为32的字符串，你传递了超过该长度的字符串)
-4.用户注册的时候，密码需要加密存储(bcrypt方式加密)
-*/
-
 // Register 用户注册
 //
 //	@parameter	registerParam
