@@ -7,34 +7,34 @@ import (
 )
 
 const (
-	timeLayout = "2006-01-02 15:04:05"
-	timeZone = "Asia/Shanghai"
+	TimeLayout = "2006-01-02 15:04:05"
+	TimeZone   = "Asia/Shanghai"
 )
 
 type Time time.Time
 
 // MarshalJSON implements the json.Marshaler interface.
 func (t Time) MarshalJSON() ([]byte, error) {
-	buf := make([]byte, 0, len(timeLayout))
+	buf := make([]byte, 0, len(TimeLayout))
 	buf = append(buf, '"')
-	buf = time.Time(t).AppendFormat(buf, timeLayout)
+	buf = time.Time(t).AppendFormat(buf, TimeLayout)
 	buf = append(buf, '"')
 	return buf, nil
 }
 
 // UnmarshalJSON implements the json.Unmarshaler interface.
 func (t *Time) UnmarshalJSON(data []byte) (err error) {
-	now, err := time.ParseInLocation(`"`+timeLayout+`"`, string(data), time.Local)
+	now, err := time.ParseInLocation(`"`+TimeLayout+`"`, string(data), time.Local)
 	*t = Time(now)
 	return
 }
 
 func (t Time) String() string {
-	return time.Time(t).Format(timeLayout)
+	return time.Time(t).Format(TimeLayout)
 }
 
 func (t Time) local() time.Time {
-	loc, _ := time.LoadLocation(timeZone)
+	loc, _ := time.LoadLocation(TimeZone)
 	return time.Time(t).In(loc)
 }
 

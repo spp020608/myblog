@@ -53,5 +53,8 @@ func setupApiRouter(r *gin.Engine) {
 	blogGroup := r.Group("/blog")
 	{
 		blogGroup.POST("/getAllBlog", api.BlogApi.GetAllBlog)
+		blogGroup.POST("/blogWithTitle", api.BlogApi.BlogWithTitle)
+		blogGroup.POST("/blogWithPostTime", api.BlogApi.BlogWithPostTime)
+		blogGroup.POST("/blogWithReadCount", api.BlogApi.BlogWithReadCount)
 	}
 }

@@ -2707,3 +2707,449 @@ runtime.main
 [2023-05-10T19:11:17.505+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
 [2023-05-10T19:11:17.508+0800]	[ INFO]	[    service/blog_service.go:30]	查询所有博客成功
 [2023-05-10T19:11:17.509+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "4.0814ms"}
+[2023-05-10T19:12:47.935+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T19:12:47.935+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T19:35:34.656+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T19:35:37.277+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "219.2µs"}
+[2023-05-10T19:35:37.344+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T19:35:37.349+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "537.8µs"}
+[2023-05-10T19:35:37.349+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "3.6896ms"}
+[2023-05-10T19:35:37.647+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "976.8µs"}
+[2023-05-10T19:35:42.226+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T19:35:42.226+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T19:35:42.236+0800]	[ERROR]	[    service/blog_service.go:27]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:27
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T19:35:42.236+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "10.5707ms"}
+[2023-05-10T19:43:00.630+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T19:43:00.630+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T19:43:00.633+0800]	[ERROR]	[    service/blog_service.go:27]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:27
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T19:43:00.633+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "3.1669ms"}
+[2023-05-10T19:43:02.682+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=0)
+[2023-05-10T19:43:02.682+0800]	[ INFO]	[    service/blog_service.go:35]	开始逆序查询所有博客
+[2023-05-10T19:43:02.684+0800]	[ERROR]	[    service/blog_service.go:39]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:39
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T19:43:02.684+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "2.2841ms"}
+[2023-05-10T19:49:33.558+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T19:49:33.558+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T19:49:59.024+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T19:50:11.234+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=0)
+[2023-05-10T19:50:11.234+0800]	[ INFO]	[    service/blog_service.go:35]	开始逆序查询所有博客
+[2023-05-10T19:50:11.238+0800]	[ INFO]	[    service/blog_service.go:42]	查询所有博客成功
+[2023-05-10T19:50:11.238+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "4.5538ms"}
+[2023-05-10T20:11:17.178+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T20:11:17.178+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T20:11:30.442+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T20:11:35.701+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "467.7µs"}
+[2023-05-10T20:11:35.766+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "996.5µs"}
+[2023-05-10T20:11:35.781+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T20:11:35.784+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "3.5184ms"}
+[2023-05-10T20:11:36.113+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T20:11:36.128+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "519.1µs"}
+[2023-05-10T20:11:56.892+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=888)
+[2023-05-10T20:11:56.892+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为888的博客
+[2023-05-10T20:11:56.898+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文}]
+[2023-05-10T20:11:56.898+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=888", "ip": "::1", "errors": "", "cost": "7.0394ms"}
+[2023-05-10T20:12:38.227+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=888888888888)
+[2023-05-10T20:12:38.227+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为888888888888的博客
+[2023-05-10T20:12:38.228+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:<nil>
+[2023-05-10T20:12:38.228+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=888888888888", "ip": "::1", "errors": "", "cost": "945.1µs"}
+[2023-05-10T20:12:41.736+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=666)
+[2023-05-10T20:12:41.737+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为666的博客
+[2023-05-10T20:12:41.737+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{21 666 6666 2021-02-28 16:02:41 +0800 CST 0 1 lisi 13456789 2 散文} {22 666 6666 2021-02-28 16:03:16 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-10T20:12:41.737+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=666", "ip": "::1", "errors": "", "cost": "1.7636ms"}
+[2023-05-10T20:12:59.475+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=he)
+[2023-05-10T20:12:59.476+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为he的博客
+[2023-05-10T20:12:59.477+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:<nil>
+[2023-05-10T20:12:59.477+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=he", "ip": "::1", "errors": "", "cost": "1.4899ms"}
+[2023-05-10T20:13:02.266+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=hehe)
+[2023-05-10T20:13:02.267+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为hehe的博客
+[2023-05-10T20:13:02.268+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:<nil>
+[2023-05-10T20:13:02.268+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=hehe", "ip": "::1", "errors": "", "cost": "1.2308ms"}
+[2023-05-10T20:13:07.750+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=666)
+[2023-05-10T20:13:07.751+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为666的博客
+[2023-05-10T20:13:07.751+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{21 666 6666 2021-02-28 16:02:41 +0800 CST 0 1 lisi 13456789 2 散文} {22 666 6666 2021-02-28 16:03:16 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-10T20:13:07.751+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=666", "ip": "::1", "errors": "", "cost": "1.407ms"}
+[2023-05-10T20:13:20.845+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=ha)
+[2023-05-10T20:13:20.845+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为ha的博客
+[2023-05-10T20:13:20.856+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:<nil>
+[2023-05-10T20:13:20.856+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=ha", "ip": "::1", "errors": "", "cost": "11.2286ms"}
+[2023-05-10T20:13:22.567+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=haha)
+[2023-05-10T20:13:22.567+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为haha的博客
+[2023-05-10T20:13:22.567+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{9 haha hehe 2021-02-24 17:11:44 +0800 CST 20 1 lisi 13456789 1 诗歌}]
+[2023-05-10T20:13:22.567+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=haha", "ip": "::1", "errors": "", "cost": "839.3µs"}
+[2023-05-10T20:13:25.847+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=hahah)
+[2023-05-10T20:13:25.847+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为hahah的博客
+[2023-05-10T20:13:25.848+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:<nil>
+[2023-05-10T20:13:25.848+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=hahah", "ip": "::1", "errors": "", "cost": "830.5µs"}
+[2023-05-10T20:13:27.829+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=haha)
+[2023-05-10T20:13:27.829+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为haha的博客
+[2023-05-10T20:13:27.830+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{9 haha hehe 2021-02-24 17:11:44 +0800 CST 20 1 lisi 13456789 1 诗歌}]
+[2023-05-10T20:13:27.830+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=haha", "ip": "::1", "errors": "", "cost": "1.1134ms"}
+[2023-05-10T20:13:31.257+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=hah)
+[2023-05-10T20:13:31.257+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为hah的博客
+[2023-05-10T20:13:31.258+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:<nil>
+[2023-05-10T20:13:31.258+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=hah", "ip": "::1", "errors": "", "cost": "828.4µs"}
+[2023-05-10T20:13:34.481+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=h)
+[2023-05-10T20:13:34.482+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为h的博客
+[2023-05-10T20:13:34.482+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:<nil>
+[2023-05-10T20:13:34.482+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=h", "ip": "::1", "errors": "", "cost": "997µs"}
+[2023-05-10T20:13:37.794+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=haha)
+[2023-05-10T20:13:37.795+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为haha的博客
+[2023-05-10T20:13:37.796+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{9 haha hehe 2021-02-24 17:11:44 +0800 CST 20 1 lisi 13456789 1 诗歌}]
+[2023-05-10T20:13:37.796+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=haha", "ip": "::1", "errors": "", "cost": "1.5134ms"}
+[2023-05-10T20:15:50.564+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=666)
+[2023-05-10T20:15:50.565+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为666的博客
+[2023-05-10T20:15:50.565+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{21 666 456 2021-02-28 16:02:41 +0800 CST 0 1 lisi 13456789 2 散文} {22 666 789 2021-02-28 16:03:16 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-10T20:15:50.565+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=666", "ip": "::1", "errors": "", "cost": "1.0002ms"}
+[2023-05-10T20:16:07.067+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=4)
+[2023-05-10T20:16:07.067+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为4的博客
+[2023-05-10T20:16:07.068+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:<nil>
+[2023-05-10T20:16:07.068+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=4", "ip": "::1", "errors": "", "cost": "1.0992ms"}
+[2023-05-10T20:16:08.604+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=44)
+[2023-05-10T20:16:08.604+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为44的博客
+[2023-05-10T20:16:08.605+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{23 44 3333 2021-02-28 16:07:30 +0800 CST 0 1 lisi 13456789 2 散文} {24 44 3333 2021-02-28 16:10:52 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-10T20:16:08.606+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=44", "ip": "::1", "errors": "", "cost": "1.5987ms"}
+[2023-05-10T20:19:09.743+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T20:19:09.743+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T20:19:23.503+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T20:19:27.050+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=4)
+[2023-05-10T20:19:27.051+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为4的博客
+[2023-05-10T20:19:27.054+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{23 44 3333 2021-02-28 16:07:30 +0800 CST 0 1 lisi 13456789 2 散文} {24 44 3333 2021-02-28 16:10:52 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-10T20:19:27.054+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=4", "ip": "::1", "errors": "", "cost": "4.1327ms"}
+[2023-05-10T20:19:30.338+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=4)
+[2023-05-10T20:19:30.338+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为4的博客
+[2023-05-10T20:19:30.339+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{23 44 3333 2021-02-28 16:07:30 +0800 CST 0 1 lisi 13456789 2 散文} {24 44 3333 2021-02-28 16:10:52 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-10T20:19:30.339+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=4", "ip": "::1", "errors": "", "cost": "923.2µs"}
+[2023-05-10T20:19:33.290+0800]	[ INFO]	[            api/blog_api.go:54]	要查询的博客title为:%!(EXTRA string=h)
+[2023-05-10T20:19:33.290+0800]	[ INFO]	[    service/blog_service.go:57]	开始正序查询标题为h的博客
+[2023-05-10T20:19:33.290+0800]	[ INFO]	[    service/blog_service.go:68]	查询博客成功:&[{9 haha hehe 2021-02-24 17:11:44 +0800 CST 20 1 lisi 13456789 1 诗歌} {10 hoho xixi 2021-02-24 17:11:47 +0800 CST 12 10 zhangsan 2323 2 散文}]
+[2023-05-10T20:19:33.290+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithTitle	{"status": 200, "method": "POST", "path": "/blog/blogWithTitle", "query": "title=h", "ip": "::1", "errors": "", "cost": "995.8µs"}
+[2023-05-10T22:08:01.237+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:08:01.237+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:08:17.002+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:08:18.652+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "396.7µs"}
+[2023-05-10T22:08:18.694+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "1.9952ms"}
+[2023-05-10T22:08:18.708+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "298.6µs"}
+[2023-05-10T22:08:18.709+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "1.3179ms"}
+[2023-05-10T22:08:18.989+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:08:19.007+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "510.3µs"}
+[2023-05-10T22:11:08.884+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:11:08.884+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:11:22.496+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:11:25.253+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "733.1µs"}
+[2023-05-10T22:11:25.299+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "983.4µs"}
+[2023-05-10T22:11:25.309+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "2.0871ms"}
+[2023-05-10T22:11:25.321+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "1.6719ms"}
+[2023-05-10T22:11:25.489+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:11:25.504+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "621.4µs"}
+[2023-05-10T22:11:53.490+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithPostTime	{"status": 404, "method": "POST", "path": "/blog/blogWithPostTime", "query": "begin=2021-02-24%2017%3A11%3A44&end=2021-02-28%2015%3A55%3A15", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:12:31.529+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:12:31.529+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:12:44.861+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:13:54.420+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:13:58.214+0800]	[ INFO]	[            api/blog_api.go:88]	开始时间为2021-02-24 17:11:44: ,开始时间为2021-02-28 15:55:15:
+[2023-05-10T22:13:58.214+0800]	[ INFO]	[    service/blog_service.go:82]	开始查询时间2021-02-24 17:11:44 +0800 CST到时间2021-02-28 15:55:15 +0800 CST的博客
+[2023-05-10T22:13:58.216+0800]	[ INFO]	[    service/blog_service.go:93]	查询博客成功:&[{10 hoho xixi 2021-02-24 17:11:47 +0800 CST 12 10 zhangsan 2323 2 散文} {11 测试文章 测试内容 2021-02-25 09:50:57 +0800 CST 22 1 lisi 13456789 3 小说} {12 今天天气不错 哈哈 2021-02-25 10:05:16 +0800 CST 0 12 zhaoliu 2323 2 散文} {14 777 777 2021-02-25 12:10:49 +0800 CST 0 0   1 诗歌} {15 7756556 56565656 2021-02-25 12:13:38 +0800 CST 0 1 lisi 13456789 1 诗歌} {16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文}]
+[2023-05-10T22:13:58.216+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithPostTime	{"status": 200, "method": "POST", "path": "/blog/blogWithPostTime", "query": "begin=2021-02-24%2017%3A11%3A44&end=2021-02-28%2015%3A55%3A15", "ip": "::1", "errors": "", "cost": "2.3391ms"}
+[2023-05-10T22:14:29.345+0800]	[ INFO]	[            api/blog_api.go:88]	开始时间为2022-02-24 17:11:44: ,开始时间为2023-02-28 15:55:15:
+[2023-05-10T22:14:29.346+0800]	[ INFO]	[    service/blog_service.go:82]	开始查询时间2022-02-24 17:11:44 +0800 CST到时间2023-02-28 15:55:15 +0800 CST的博客
+[2023-05-10T22:14:29.346+0800]	[ INFO]	[    service/blog_service.go:93]	查询博客成功:<nil>
+[2023-05-10T22:14:29.346+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithPostTime	{"status": 500, "method": "POST", "path": "/blog/blogWithPostTime", "query": "begin=2022-02-24%2017%3A11%3A44&end=2023-02-28%2015%3A55%3A15", "ip": "::1", "errors": "", "cost": "1.0086ms"}
+[2023-05-10T22:15:46.483+0800]	[ INFO]	[            api/blog_api.go:88]	开始时间为2021-07-02 16:16:24: ,开始时间为2021-02-28 16:01:51:
+[2023-05-10T22:15:46.483+0800]	[ INFO]	[    service/blog_service.go:82]	开始查询时间2021-07-02 16:16:24 +0800 CST到时间2021-02-28 16:01:51 +0800 CST的博客
+[2023-05-10T22:15:46.484+0800]	[ INFO]	[    service/blog_service.go:93]	查询博客成功:<nil>
+[2023-05-10T22:15:46.484+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithPostTime	{"status": 500, "method": "POST", "path": "/blog/blogWithPostTime", "query": "begin=2021-07-02%2016%3A16%3A24&end=2021-02-28%2016%3A01%3A51", "ip": "::1", "errors": "", "cost": "1.0574ms"}
+[2023-05-10T22:16:02.770+0800]	[ INFO]	[            api/blog_api.go:88]	开始时间为2021-07-02 16:16:24: ,开始时间为2021-02-28 15:55:15:
+[2023-05-10T22:16:02.771+0800]	[ INFO]	[    service/blog_service.go:82]	开始查询时间2021-07-02 16:16:24 +0800 CST到时间2021-02-28 15:55:15 +0800 CST的博客
+[2023-05-10T22:16:02.771+0800]	[ INFO]	[    service/blog_service.go:93]	查询博客成功:<nil>
+[2023-05-10T22:16:02.771+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithPostTime	{"status": 500, "method": "POST", "path": "/blog/blogWithPostTime", "query": "begin=2021-07-02%2016%3A16%3A24&end=2021-02-28%2015%3A55%3A15", "ip": "::1", "errors": "", "cost": "1.2606ms"}
+[2023-05-10T22:16:10.119+0800]	[ INFO]	[            api/blog_api.go:88]	开始时间为2021-02-24 17:11:44: ,开始时间为2021-02-28 15:55:15:
+[2023-05-10T22:16:10.119+0800]	[ INFO]	[    service/blog_service.go:82]	开始查询时间2021-02-24 17:11:44 +0800 CST到时间2021-02-28 15:55:15 +0800 CST的博客
+[2023-05-10T22:16:10.120+0800]	[ INFO]	[    service/blog_service.go:93]	查询博客成功:&[{10 hoho xixi 2021-02-24 17:11:47 +0800 CST 12 10 zhangsan 2323 2 散文} {11 测试文章 测试内容 2021-02-25 09:50:57 +0800 CST 22 1 lisi 13456789 3 小说} {12 今天天气不错 哈哈 2021-02-25 10:05:16 +0800 CST 0 12 zhaoliu 2323 2 散文} {14 777 777 2021-02-25 12:10:49 +0800 CST 0 0   1 诗歌} {15 7756556 56565656 2021-02-25 12:13:38 +0800 CST 0 1 lisi 13456789 1 诗歌} {16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文}]
+[2023-05-10T22:16:10.120+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithPostTime	{"status": 200, "method": "POST", "path": "/blog/blogWithPostTime", "query": "begin=2021-02-24%2017%3A11%3A44&end=2021-02-28%2015%3A55%3A15", "ip": "::1", "errors": "", "cost": "1.6089ms"}
+[2023-05-10T22:27:21.009+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:27:21.009+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:27:34.734+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:27:34.766+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "515.2µs"}
+[2023-05-10T22:27:34.814+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.9952ms"}
+[2023-05-10T22:27:34.815+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "756µs"}
+[2023-05-10T22:27:34.817+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "1.1401ms"}
+[2023-05-10T22:27:35.194+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "995.9µs"}
+[2023-05-10T22:27:35.195+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "1.9925ms"}
+[2023-05-10T22:27:41.366+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "91.7µs"}
+[2023-05-10T22:27:41.406+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-10T22:27:41.407+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:27:41.418+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-10T22:27:41.538+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "997.2µs"}
+[2023-05-10T22:27:41.538+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:16.477+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:29:16.477+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:29:30.009+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:29:30.442+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "473.3µs"}
+[2023-05-10T22:29:30.494+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "997.1µs"}
+[2023-05-10T22:29:30.502+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "2.9917ms"}
+[2023-05-10T22:29:30.502+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.9946ms"}
+[2023-05-10T22:29:30.818+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "1.9946ms"}
+[2023-05-10T22:29:30.836+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "2.3532ms"}
+[2023-05-10T22:29:31.497+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "581.9µs"}
+[2023-05-10T22:29:31.534+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:31.548+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:31.549+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:31.685+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:31.687+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:32.143+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "190.7µs"}
+[2023-05-10T22:29:32.190+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:32.195+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:32.204+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "997.2µs"}
+[2023-05-10T22:29:32.283+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:32.315+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "11.9678ms"}
+[2023-05-10T22:29:32.344+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "939.5µs"}
+[2023-05-10T22:29:32.559+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "693µs"}
+[2023-05-10T22:29:32.666+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:32.843+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "2.9919ms"}
+[2023-05-10T22:29:33.448+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "1.01ms"}
+[2023-05-10T22:29:33.485+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:33.486+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:33.493+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:33.564+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:33.580+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:33.899+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "560µs"}
+[2023-05-10T22:29:34.004+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "996.4µs"}
+[2023-05-10T22:29:34.340+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:34.377+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "977.1µs"}
+[2023-05-10T22:29:34.381+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:34.387+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:34.448+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "943.9µs"}
+[2023-05-10T22:29:34.453+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:34.798+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "925.7µs"}
+[2023-05-10T22:29:34.921+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "997µs"}
+[2023-05-10T22:29:35.292+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "167.3µs"}
+[2023-05-10T22:29:35.334+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:35.335+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:35.340+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:35.416+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "996.6µs"}
+[2023-05-10T22:29:35.449+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "1.0498ms"}
+[2023-05-10T22:29:38.830+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:38.866+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:38.872+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:38.877+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:38.956+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:29:38.964+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "998µs"}
+[2023-05-10T22:30:41.369+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:30:41.369+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:30:54.642+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:30:57.162+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "860.3µs"}
+[2023-05-10T22:30:57.216+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:30:57.217+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "2.3196ms"}
+[2023-05-10T22:30:57.219+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "933.6µs"}
+[2023-05-10T22:30:57.491+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "997.4µs"}
+[2023-05-10T22:30:57.670+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:32:07.136+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:32:07.136+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:32:20.544+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:32:41.622+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "332.7µs"}
+[2023-05-10T22:32:41.665+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "564.9µs"}
+[2023-05-10T22:32:41.666+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "3.9888ms"}
+[2023-05-10T22:32:41.671+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:32:41.868+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:32:41.869+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "532.4µs"}
+[2023-05-10T22:32:42.615+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "465.7µs"}
+[2023-05-10T22:32:42.786+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "204.3µs"}
+[2023-05-10T22:32:42.867+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "231.7µs"}
+[2023-05-10T22:32:43.090+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:32:43.090+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:32:43.215+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:32:43.255+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:32:43.519+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "2.5158ms"}
+[2023-05-10T22:32:43.595+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "252µs"}
+[2023-05-10T22:32:43.768+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:34:13.992+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:34:13.992+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:34:27.556+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:34:27.587+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "511.6µs"}
+[2023-05-10T22:34:27.639+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "998.4µs"}
+[2023-05-10T22:34:27.644+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "4.438ms"}
+[2023-05-10T22:34:27.644+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "1.2369ms"}
+[2023-05-10T22:34:27.925+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "841.6µs"}
+[2023-05-10T22:34:28.134+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-10T22:35:01.901+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T22:35:01.902+0800]	[ INFO]	[    service/blog_service.go:23]	开始正序查询所有博客
+[2023-05-10T22:35:01.907+0800]	[ INFO]	[    service/blog_service.go:31]	查询所有博客成功
+[2023-05-10T22:35:01.907+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "127.0.0.1", "errors": "", "cost": "6.4868ms"}
+[2023-05-10T22:35:44.255+0800]	[ INFO]	[           api/blog_api.go:120]	开始查询最小阅读量5到最大阅读量100的博客
+[2023-05-10T22:35:44.255+0800]	[ INFO]	[   service/blog_service.go:107]	开始查询最小阅读量5到最大阅读量100的博客
+[2023-05-10T22:35:44.256+0800]	[ INFO]	[   service/blog_service.go:118]	查询博客成功:&[{9 haha hehe 2021-02-24 17:11:44 +0800 CST 20 1 lisi 13456789 1 诗歌} {10 hoho xixi 2021-02-24 17:11:47 +0800 CST 12 10 zhangsan 2323 2 散文} {11 测试文章 测试内容 2021-02-25 09:50:57 +0800 CST 22 1 lisi 13456789 3 小说}]
+[2023-05-10T22:35:44.256+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithReadCount	{"status": 200, "method": "POST", "path": "/blog/blogWithReadCount", "query": "min=5&max=100", "ip": "127.0.0.1", "errors": "", "cost": "1.0352ms"}
+[2023-05-10T22:35:50.990+0800]	[ INFO]	[           api/blog_api.go:120]	开始查询最小阅读量5到最大阅读量100的博客
+[2023-05-10T22:35:50.990+0800]	[ INFO]	[   service/blog_service.go:107]	开始查询最小阅读量5到最大阅读量100的博客
+[2023-05-10T22:35:50.991+0800]	[ INFO]	[   service/blog_service.go:118]	查询博客成功:&[{9 haha hehe 2021-02-24 17:11:44 +0800 CST 20 1 lisi 13456789 1 诗歌} {10 hoho xixi 2021-02-24 17:11:47 +0800 CST 12 10 zhangsan 2323 2 散文} {11 测试文章 测试内容 2021-02-25 09:50:57 +0800 CST 22 1 lisi 13456789 3 小说}]
+[2023-05-10T22:35:50.991+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithReadCount	{"status": 200, "method": "POST", "path": "/blog/blogWithReadCount", "query": "min=5&max=100", "ip": "127.0.0.1", "errors": "", "cost": "997.2µs"}
+[2023-05-10T22:37:43.690+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "790.9µs"}
+[2023-05-10T22:37:43.730+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-10T22:37:43.739+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-10T22:37:43.741+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-10T22:37:44.056+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "996.8µs"}
+[2023-05-10T22:37:44.063+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-10T22:37:54.433+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:37:54.433+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T22:38:08.291+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T22:38:08.384+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-10T22:38:08.434+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "1.9946ms"}
+[2023-05-10T22:38:08.437+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "4.0937ms"}
+[2023-05-10T22:38:08.439+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "869.3µs"}
+[2023-05-10T22:38:08.726+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "997.7µs"}
+[2023-05-10T22:38:08.740+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-10T22:38:19.161+0800]	[ INFO]	[           api/blog_api.go:120]	开始查询最小阅读量0到最大阅读量1的博客
+[2023-05-10T22:38:19.162+0800]	[ INFO]	[   service/blog_service.go:107]	开始查询最小阅读量0到最大阅读量1的博客
+[2023-05-10T22:38:19.168+0800]	[ INFO]	[   service/blog_service.go:118]	查询博客成功:<nil>
+[2023-05-10T22:38:19.168+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithReadCount	{"status": 500, "method": "POST", "path": "/blog/blogWithReadCount", "query": "min=0&max=1", "ip": "127.0.0.1", "errors": "", "cost": "7.0897ms"}
+[2023-05-10T22:39:25.549+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T22:39:25.549+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭

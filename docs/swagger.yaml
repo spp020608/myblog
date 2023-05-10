@@ -53,6 +53,115 @@ definitions:
 info:
   contact: {}
 paths:
+  /blog/blogWithPostTime:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      parameters:
+      - description: 开始时间
+        in: query
+        name: begin
+        required: true
+        type: string
+      - description: 截止时间
+        in: query
+        name: end
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      tags:
+      - blogApi
+  /blog/blogWithReadCount:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      parameters:
+      - description: 最小阅读量
+        in: query
+        name: min
+        required: true
+        type: integer
+      - description: 最大阅读量
+        in: query
+        name: max
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      tags:
+      - blogApi
+  /blog/blogWithTitle:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      parameters:
+      - description: 输入标题模糊查询
+        in: query
+        name: title
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      tags:
+      - blogApi
   /blog/getAllBlog:
     post:
       consumes:
@@ -85,7 +194,7 @@ paths:
             $ref: '#/definitions/swagger.Http500'
       summary: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
       tags:
-      - userApi
+      - blogApi
   /example/getAuthorizationHeader:
     get:
       consumes:
