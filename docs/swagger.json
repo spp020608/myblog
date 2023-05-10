@@ -19,12 +19,11 @@
                 "summary": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",
                 "parameters": [
                     {
-                        "maximum": 1,
-                        "minimum": 1,
                         "type": "integer",
                         "description": "规则: 正序为 1, 逆序为0",
                         "name": "sort",
-                        "in": "query"
+                        "in": "query",
+                        "required": true
                     }
                 ],
                 "responses": {

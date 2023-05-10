@@ -6,7 +6,6 @@ import (
 	"go.uber.org/zap"
 	"myblog/internal/pkg/resp"
 	"myblog/internal/service"
-	"myblog/pkg/validate"
 )
 
 var BlogApi = new(blogApi)
@@ -20,23 +19,29 @@ type blogApi struct{}
 //	@Tags			userApi
 //	@Accept			mpfd
 //	@Produce		json
-//	@Param			sort	query		int				false	"规则: 正序为 1, 逆序为0"	minimum(1)	maximum(1)
+//	@Param			sort	query		int				true	"规则: 正序为 1, 逆序为0"
 //	@Success		200		{object}	swagger.HttpOk	"OK"
 //	@Failure		400		{object}	swagger.Http400	"Bad Request"
 //	@Failure		404		{object}	swagger.Http404	"Page Not Found"
 //	@Failure		500		{object}	swagger.Http500	"InternalError"
 //	@Router			/blog/getAllBlog [post]
 func (blogApi) GetAllBlog(c *gin.Context) {
-	var number int64
 	fmt.Println("int为")
-	if err := c.ShouldBind(&number); err != nil {
+
+	query := c.Query("sort")
+	zap.S().Infof("query:", query)
+	/*	if err := c.ShouldBind(&number); err != nil {
 		trans := validate.TranslateError(err)
 		zap.S().Errorf("绑定参数失败: %s\n", trans)
 		resp.InternalServerError(c, trans)
 		return
-	}
+	}*/
 
-	blog := service.BlogService.GetAllBlog(number)
-	resp.Ok(c, "查询所有用户成功", &blog)
+	blog := service.BlogService.GetAllBlog(query)
+	if blog != nil {
+		resp.Ok(c, "查询文章成功", &blog)
+	} else {
+		resp.InternalServerError(c, "查询文章失败")
+	}
 
 }

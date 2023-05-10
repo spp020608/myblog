@@ -2383,3 +2383,327 @@ runtime.main
 [2023-05-09T22:02:50.231+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "4.8401ms"}
 [2023-05-09T22:06:20.380+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
 [2023-05-09T22:06:20.380+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T15:34:51.059+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T15:34:56.896+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "1.187ms"}
+[2023-05-10T15:34:56.967+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "963.4µs"}
+[2023-05-10T15:34:56.973+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "947.9µs"}
+[2023-05-10T15:34:56.974+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "3.0994ms"}
+[2023-05-10T15:34:57.213+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "601.5µs"}
+[2023-05-10T15:35:14.847+0800]	[ INFO]	[    service/blog_service.go:33]	开始正序查询所有博客
+[2023-05-10T15:35:14.854+0800]	[ INFO]	[    service/blog_service.go:40]	查询所有博客成功
+[2023-05-10T15:35:14.854+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "7.6403ms"}
+[2023-05-10T18:24:27.929+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:24:27.929+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:24:42.331+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:24:42.335+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "545.4µs"}
+[2023-05-10T18:24:42.408+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "866.1µs"}
+[2023-05-10T18:24:42.415+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "997.3µs"}
+[2023-05-10T18:24:42.416+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "997.3µs"}
+[2023-05-10T18:24:42.657+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "351.2µs"}
+[2023-05-10T18:24:49.778+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:24:49.778+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:24:49.784+0800]	[ INFO]	[    service/blog_service.go:29]	查询所有博客成功
+[2023-05-10T18:24:49.784+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "127.0.0.1", "errors": "", "cost": "6.1164ms"}
+[2023-05-10T18:25:03.338+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=0)
+[2023-05-10T18:25:03.338+0800]	[ INFO]	[    service/blog_service.go:33]	开始逆序查询所有博客
+[2023-05-10T18:25:03.339+0800]	[ INFO]	[    service/blog_service.go:40]	查询所有博客成功
+[2023-05-10T18:25:03.339+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "127.0.0.1", "errors": "", "cost": "706.4µs"}
+[2023-05-10T18:29:14.925+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:29:14.925+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:29:27.369+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:30:23.692+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=0)
+[2023-05-10T18:30:23.693+0800]	[ INFO]	[    service/blog_service.go:33]	开始逆序查询所有博客
+[2023-05-10T18:30:23.696+0800]	[ INFO]	[    service/blog_service.go:40]	查询所有博客成功
+[2023-05-10T18:30:23.697+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "4.6034ms"}
+[2023-05-10T18:30:37.006+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:30:37.006+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:30:37.007+0800]	[ INFO]	[    service/blog_service.go:29]	查询所有博客成功
+[2023-05-10T18:30:37.007+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "1.6416ms"}
+[2023-05-10T18:38:52.212+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:38:52.212+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:39:04.838+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:39:08.344+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:39:08.344+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:39:08.348+0800]	[ INFO]	[    service/blog_service.go:29]	查询所有博客成功
+[2023-05-10T18:39:08.348+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "3.9643ms"}
+[2023-05-10T18:39:47.810+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:39:47.810+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:40:00.130+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:40:02.972+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:40:02.973+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:40:02.977+0800]	[ERROR]	[    service/blog_service.go:26]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:26
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T18:40:02.977+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "4.6853ms"}
+[2023-05-10T18:40:04.748+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:40:04.748+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:40:04.750+0800]	[ERROR]	[    service/blog_service.go:26]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:26
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T18:40:04.750+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "1.2941ms"}
+[2023-05-10T18:40:05.126+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:40:05.126+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:40:05.127+0800]	[ERROR]	[    service/blog_service.go:26]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:26
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T18:40:05.127+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "1.2349ms"}
+[2023-05-10T18:40:05.466+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:40:05.466+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:40:05.468+0800]	[ERROR]	[    service/blog_service.go:26]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:26
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T18:40:05.468+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "1.9705ms"}
+[2023-05-10T18:40:05.978+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:40:05.978+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:40:05.979+0800]	[ERROR]	[    service/blog_service.go:26]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:26
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T18:40:05.979+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "1.692ms"}
+[2023-05-10T18:40:47.533+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:40:47.533+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:40:59.752+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:43:57.681+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:43:57.681+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:44:09.740+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:44:18.729+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=2)
+[2023-05-10T18:44:18.729+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=2", "ip": "::1", "errors": "", "cost": "171.9µs"}
+[2023-05-10T18:49:14.694+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:49:14.694+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:49:27.202+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:49:46.553+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:49:46.553+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:49:58.875+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:50:05.209+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=2)
+[2023-05-10T18:50:05.210+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=2", "ip": "::1", "errors": "", "cost": "515.9µs"}
+[2023-05-10T18:50:07.620+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:50:07.620+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:50:07.622+0800]	[ INFO]	[    service/blog_service.go:29]	查询所有博客成功
+[2023-05-10T18:50:07.622+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "1.6546ms"}
+[2023-05-10T18:58:55.258+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T18:58:55.258+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T18:59:07.682+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T18:59:18.546+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T18:59:18.546+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T18:59:18.549+0800]	[ INFO]	[    service/blog_service.go:30]	查询所有博客成功
+[2023-05-10T18:59:18.549+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "2.9736ms"}
+[2023-05-10T19:01:10.060+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T19:01:10.060+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T19:01:22.504+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T19:01:22.612+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T19:01:22.612+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T19:01:22.615+0800]	[ERROR]	[    service/blog_service.go:27]	查询所有博客失败invalid field found for struct myblog/model/vo.Blog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:27
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-10T19:01:22.615+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "3.0058ms"}
+[2023-05-10T19:01:44.650+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T19:01:44.650+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T19:01:56.941+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T19:01:58.897+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T19:01:58.897+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T19:01:58.901+0800]	[ INFO]	[    service/blog_service.go:30]	查询所有博客成功
+[2023-05-10T19:01:58.901+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "3.7853ms"}
+[2023-05-10T19:09:30.907+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-10T19:09:30.907+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-10T19:09:43.684+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-10T19:11:17.505+0800]	[ INFO]	[            api/blog_api.go:32]	query:%!(EXTRA string=1)
+[2023-05-10T19:11:17.505+0800]	[ INFO]	[    service/blog_service.go:22]	开始正序查询所有博客
+[2023-05-10T19:11:17.508+0800]	[ INFO]	[    service/blog_service.go:30]	查询所有博客成功
+[2023-05-10T19:11:17.509+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "4.0814ms"}

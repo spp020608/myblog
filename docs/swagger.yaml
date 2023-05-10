@@ -61,9 +61,8 @@ paths:
       parameters:
       - description: '规则: 正序为 1, 逆序为0'
         in: query
-        maximum: 1
-        minimum: 1
         name: sort
+        required: true
         type: integer
       produces:
       - application/json
