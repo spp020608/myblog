@@ -29,7 +29,7 @@ type blogApi struct{}
 //	@Router			/blog/getAllBlog [post]
 func (blogApi) GetAllBlog(c *gin.Context) {
 	query := c.Query("sort")
-	zap.S().Infof("query:", query)
+	zap.S().Info("query:", query)
 	blog := service.BlogService.GetAllBlog(query)
 	if blog != nil {
 		resp.Ok(c, "查询文章成功", &blog)
@@ -54,7 +54,7 @@ func (blogApi) GetAllBlog(c *gin.Context) {
 //	@Router			/blog/blogWithTitle [post]
 func (blogApi) BlogWithTitle(c *gin.Context) {
 	title := c.Query("title")
-	zap.S().Infof("要查询的博客title为:", title)
+	zap.S().Info("要查询的博客title为:", title)
 	blogWithTitle, err := service.BlogService.BlogWithTitle(title)
 	if err != nil {
 		zap.S().Error("查询发生错误", err.Error())
