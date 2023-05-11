@@ -3153,3 +3153,399 @@ runtime.main
 [2023-05-10T22:38:19.168+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithReadCount	{"status": 500, "method": "POST", "path": "/blog/blogWithReadCount", "query": "min=0&max=1", "ip": "127.0.0.1", "errors": "", "cost": "7.0897ms"}
 [2023-05-10T22:39:25.549+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
 [2023-05-10T22:39:25.549+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T15:57:38.191+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T15:57:43.720+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "900µs"}
+[2023-05-11T15:57:43.753+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "683.2µs"}
+[2023-05-11T15:57:43.757+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.8065ms"}
+[2023-05-11T15:57:43.757+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "2.324ms"}
+[2023-05-11T15:57:43.963+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "390.2µs"}
+[2023-05-11T15:57:44.067+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "328.2µs"}
+[2023-05-11T15:58:07.026+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T15:58:07.026+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T15:58:19.664+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T15:58:19.767+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "492.6µs"}
+[2023-05-11T15:58:19.798+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-11T15:58:19.800+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.1746ms"}
+[2023-05-11T15:58:19.803+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "1.1082ms"}
+[2023-05-11T15:58:20.040+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "636.7µs"}
+[2023-05-11T15:58:20.142+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "719.2µs"}
+[2023-05-11T15:58:31.265+0800]	[ INFO]	[           api/blog_api.go:152]	开始查询类别为散文的博客
+[2023-05-11T15:58:31.265+0800]	[ INFO]	[   service/blog_service.go:133]	开始查询类别为散文的博客
+[2023-05-11T15:58:31.270+0800]	[ INFO]	[   service/blog_service.go:147]	查询博客成功:&[{10 hoho xixi 2021-02-24 17:11:47 +0800 CST 12 10 zhangsan 2323 2 散文} {12 今天天气不错 哈哈 2021-02-25 10:05:16 +0800 CST 0 12 zhaoliu 2323 2 散文} {16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文} {20 666 123 2021-02-28 16:01:51 +0800 CST 0 1 lisi 13456789 2 散文} {21 666 456 2021-02-28 16:02:41 +0800 CST 0 1 lisi 13456789 2 散文} {22 666 789 2021-02-28 16:03:16 +0800 CST 0 1 lisi 13456789 2 散文} {23 44 3333 2021-02-28 16:07:30 +0800 CST 0 1 lisi 13456789 2 散文} {24 44 3333 2021-02-28 16:10:52 +0800 CST 0 1 lisi 13456789 2 散文} {25 777 7777 2021-02-28 16:42:40 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-11T15:58:31.270+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithCategoryName	{"status": 200, "method": "POST", "path": "/blog/blogWithCategoryName", "query": "categoryName=%E6%95%A3%E6%96%87", "ip": "::1", "errors": "", "cost": "4.5432ms"}
+[2023-05-11T15:59:29.112+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T15:59:29.112+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T16:47:24.941+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T16:47:57.551+0800]	[ INFO]	[   service/blog_service.go:173]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T16:47:57.556+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "", "ip": "::1", "errors": "", "cost": "5.119ms"}
+[2023-05-11T16:51:42.167+0800]	[ INFO]	[   service/blog_service.go:173]	开始查询博客的条件为：10001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T16:51:42.169+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=1", "ip": "::1", "errors": "", "cost": "2.8511ms"}
+[2023-05-11T16:52:10.556+0800]	[ INFO]	[   service/blog_service.go:173]	开始查询博客的条件为：1诗歌0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T16:52:10.560+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=1&title=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "3.7772ms"}
+[2023-05-11T16:52:13.425+0800]	[ INFO]	[   service/blog_service.go:173]	开始查询博客的条件为：0诗歌0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T16:52:13.428+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.738ms"}
+[2023-05-11T16:52:14.235+0800]	[ INFO]	[   service/blog_service.go:173]	开始查询博客的条件为：0诗歌0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T16:52:14.239+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "3.6641ms"}
+[2023-05-11T16:52:14.729+0800]	[ INFO]	[   service/blog_service.go:173]	开始查询博客的条件为：0诗歌0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T16:52:14.731+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.4897ms"}
+[2023-05-11T16:54:18.343+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T16:54:18.343+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T16:54:31.069+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T16:55:28.022+0800]	[ INFO]	[   service/blog_service.go:173]	开始查询博客的条件为：0诗歌0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T16:55:28.024+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.2241ms"}
+[2023-05-11T16:59:55.299+0800]	[ INFO]	[   service/blog_service.go:173]	开始查询博客的条件为：010001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T16:59:55.302+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=1", "ip": "::1", "errors": "", "cost": "3.6341ms"}
+[2023-05-11T17:00:14.766+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T17:00:14.766+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T17:56:14.948+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T17:56:19.477+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：10001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T17:56:19.478+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=1", "ip": "::1", "errors": "", "cost": "1.1871ms"}
+[2023-05-11T17:56:46.365+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：90001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T17:56:46.365+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=9", "ip": "::1", "errors": "", "cost": "979.7µs"}
+[2023-05-11T17:56:47.235+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：90001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T17:56:47.236+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=9", "ip": "::1", "errors": "", "cost": "965.2µs"}
+[2023-05-11T17:57:02.457+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：240001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T17:57:02.458+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=24", "ip": "::1", "errors": "", "cost": "1.2725ms"}
+[2023-05-11T17:58:26.488+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T17:58:26.488+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T17:58:38.895+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T17:58:47.560+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：240001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T17:58:47.560+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=24", "ip": "::1", "errors": "", "cost": "778.1µs"}
+[2023-05-11T18:00:08.915+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:00:08.915+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:00:21.281+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:00:23.095+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：240001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:00:23.095+0800]	[ INFO]	[   service/blog_service.go:161]	&{{0x211fbf0 0xc00040fce0  0x117e280 blog <nil>}}
+[2023-05-11T18:00:23.095+0800]	[ INFO]	[   service/blog_service.go:165]	&{{0x211fbf0 0xc00040fce0  0x117e280 blog <nil>}}
+[2023-05-11T18:00:23.096+0800]	[ INFO]	[   service/blog_service.go:173]	&{{0x211fbf0 0xc00040fce0  0x117e280 blog <nil>}}
+[2023-05-11T18:00:23.096+0800]	[ INFO]	[   service/blog_service.go:177]	&{{0x211fbf0 0xc00040fce0  0x117e280 blog <nil>}}
+[2023-05-11T18:00:23.096+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=24", "ip": "::1", "errors": "", "cost": "1.1903ms"}
+[2023-05-11T18:02:15.028+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:02:15.028+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:02:27.361+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:02:29.897+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：240001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:02:29.897+0800]	[ INFO]	[   service/blog_service.go:161]	&{{0x222fbf0 0xc000102300  0x128e280 blog <nil>}}
+[2023-05-11T18:02:29.898+0800]	[ INFO]	[   service/blog_service.go:166]	&[{24 44 3333 2021-02-28 16:10:52 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-11T18:02:29.899+0800]	[ INFO]	[   service/blog_service.go:176]	&[{24 44 3333 2021-02-28 16:10:52 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-11T18:02:29.899+0800]	[ INFO]	[   service/blog_service.go:181]	&[{24 44 3333 2021-02-28 16:10:52 +0800 CST 0 1 lisi 13456789 2 散文}]
+[2023-05-11T18:02:29.899+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=24", "ip": "::1", "errors": "", "cost": "2.3839ms"}
+[2023-05-11T18:03:14.127+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:03:14.127+0800]	[ INFO]	[   service/blog_service.go:161]	&{{0x222fbf0 0xc0001034d0  0x128e280 blog <nil>}}
+[2023-05-11T18:03:14.128+0800]	[ INFO]	[   service/blog_service.go:171]	&[{16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文}]
+[2023-05-11T18:03:14.129+0800]	[ INFO]	[   service/blog_service.go:176]	&[{16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文}]
+[2023-05-11T18:03:14.129+0800]	[ INFO]	[   service/blog_service.go:181]	&[{16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文}]
+[2023-05-11T18:03:14.130+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888", "ip": "::1", "errors": "", "cost": "3.162ms"}
+[2023-05-11T18:04:07.825+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0散文
+[2023-05-11T18:04:07.826+0800]	[ INFO]	[   service/blog_service.go:161]	&{{0x222fbf0 0xc000103e00  0x128e280 blog <nil>}}
+[2023-05-11T18:04:07.827+0800]	[ INFO]	[   service/blog_service.go:171]	&[{16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文}]
+[2023-05-11T18:04:07.827+0800]	[ INFO]	[   service/blog_service.go:176]	&[{16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文}]
+[2023-05-11T18:04:07.827+0800]	[ INFO]	[   service/blog_service.go:181]	&[{16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文}]
+[2023-05-11T18:04:07.829+0800]	[ INFO]	[   service/blog_service.go:198]	&[{16 888 8888 2021-02-28 15:54:36 +0800 CST 0 0   2 散文} {18 888 8888 2021-02-28 15:56:30 +0800 CST 0 0   2 散文} {19 888 8888 2021-02-28 15:57:41 +0800 CST 0 0   2 散文}]
+[2023-05-11T18:04:07.830+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&categoryName=%E6%95%A3%E6%96%87", "ip": "::1", "errors": "", "cost": "4.748ms"}
+[2023-05-11T18:05:33.771+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:05:33.771+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:05:46.506+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:05:51.084+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0散文
+[2023-05-11T18:05:51.086+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&categoryName=%E6%95%A3%E6%96%87", "ip": "::1", "errors": "", "cost": "2.8661ms"}
+[2023-05-11T18:06:47.691+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 20
+[2023-05-11T18:06:47.693+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "max=20", "ip": "::1", "errors": "", "cost": "2.9403ms"}
+[2023-05-11T18:06:54.821+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 20散文
+[2023-05-11T18:06:54.824+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "categoryName=%E6%95%A3%E6%96%87&max=20", "ip": "::1", "errors": "", "cost": "3.2635ms"}
+[2023-05-11T18:07:20.566+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：070001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 20散文
+[2023-05-11T18:07:20.569+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=7&categoryName=%E6%95%A3%E6%96%87&max=20", "ip": "::1", "errors": "", "cost": "2.479ms"}
+[2023-05-11T18:07:24.131+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：070001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 20
+[2023-05-11T18:07:24.133+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=7&max=20", "ip": "::1", "errors": "", "cost": "1.7069ms"}
+[2023-05-11T18:07:40.619+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：070001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 20
+[2023-05-11T18:07:40.621+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=7&max=20", "ip": "::1", "errors": "", "cost": "2.483ms"}
+[2023-05-11T18:07:43.865+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：07770001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 20
+[2023-05-11T18:07:43.867+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=777&max=20", "ip": "::1", "errors": "", "cost": "2.4932ms"}
+[2023-05-11T18:15:58.151+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:15:58.151+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:16:10.546+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:16:10.702+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "517.5µs"}
+[2023-05-11T18:16:10.741+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-11T18:16:10.743+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "1.5537ms"}
+[2023-05-11T18:16:10.749+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "4.695ms"}
+[2023-05-11T18:16:10.992+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "596.8µs"}
+[2023-05-11T18:16:11.153+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "536.6µs"}
+[2023-05-11T18:16:58.756+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "501.4µs"}
+[2023-05-11T18:16:58.782+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-11T18:16:58.783+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-11T18:16:58.795+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 304, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "210.2µs"}
+[2023-05-11T18:16:58.952+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 304, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-11T18:16:58.957+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "997.5µs"}
+[2023-05-11T18:17:08.687+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:17:08.687+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:17:21.146+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:17:26.300+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "503.5µs"}
+[2023-05-11T18:17:26.341+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.995ms"}
+[2023-05-11T18:17:26.341+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-11T18:17:26.347+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "997.6µs"}
+[2023-05-11T18:17:26.590+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "655.1µs"}
+[2023-05-11T18:17:26.763+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "127µs"}
+[2023-05-11T18:18:19.733+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:18:19.736+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888", "ip": "::1", "errors": "", "cost": "2.8312ms"}
+[2023-05-11T18:19:19.626+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:19:19.627+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888", "ip": "::1", "errors": "", "cost": "1.713ms"}
+[2023-05-11T18:19:29.575+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:29.577+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.1528ms"}
+[2023-05-11T18:19:32.475+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:32.477+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.6633ms"}
+[2023-05-11T18:19:32.953+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:32.956+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.3833ms"}
+[2023-05-11T18:19:38.443+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:38.445+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.2747ms"}
+[2023-05-11T18:19:38.874+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:38.876+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.7471ms"}
+[2023-05-11T18:19:39.069+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:39.071+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.9182ms"}
+[2023-05-11T18:19:39.230+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:39.233+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.9149ms"}
+[2023-05-11T18:19:39.426+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:39.429+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.8209ms"}
+[2023-05-11T18:19:39.562+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:39.564+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.7967ms"}
+[2023-05-11T18:19:39.714+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:39.716+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.758ms"}
+[2023-05-11T18:19:39.891+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:39.894+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.5395ms"}
+[2023-05-11T18:19:40.062+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:40.065+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.8102ms"}
+[2023-05-11T18:19:40.227+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:40.229+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.6427ms"}
+[2023-05-11T18:19:40.397+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:40.400+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "3.115ms"}
+[2023-05-11T18:19:40.570+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:40.573+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.1742ms"}
+[2023-05-11T18:19:40.756+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:40.758+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.3779ms"}
+[2023-05-11T18:19:40.956+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：188880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:19:40.958+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=18&title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.1481ms"}
+[2023-05-11T18:20:35.394+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:20:35.395+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.6001ms"}
+[2023-05-11T18:20:48.818+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：453543450001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:20:48.820+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=45354345&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.2585ms"}
+[2023-05-11T18:20:53.586+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：8880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:20:53.588+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.6945ms"}
+[2023-05-11T18:20:59.813+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：0770001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:20:59.815+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=77&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.1768ms"}
+[2023-05-11T18:21:02.764+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：0880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:21:02.767+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=88&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "3.0544ms"}
+[2023-05-11T18:21:04.985+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:21:04.988+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.3734ms"}
+[2023-05-11T18:21:15.631+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 50诗歌
+[2023-05-11T18:21:15.634+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&max=50&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "3.1935ms"}
+[2023-05-11T18:21:18.515+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 30 50诗歌
+[2023-05-11T18:21:18.518+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&min=30&max=50&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.9025ms"}
+[2023-05-11T18:21:29.112+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 50诗歌
+[2023-05-11T18:21:29.115+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&max=50&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "3.3407ms"}
+[2023-05-11T18:21:39.493+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:21:39.495+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&min=0&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.1725ms"}
+[2023-05-11T18:22:16.660+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:22:16.660+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:22:29.263+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:22:36.054+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 50 0诗歌
+[2023-05-11T18:22:36.056+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&min=50&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.8545ms"}
+[2023-05-11T18:22:39.494+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 10 0诗歌
+[2023-05-11T18:22:39.496+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&min=10&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.4048ms"}
+[2023-05-11T18:22:41.293+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:22:41.293+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "598.8µs"}
+[2023-05-11T18:22:45.003+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:22:45.004+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&min=0&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.1372ms"}
+[2023-05-11T18:22:49.226+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:22:49.227+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.1159ms"}
+[2023-05-11T18:23:19.839+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:23:19.839+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:23:32.313+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:23:46.502+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:23:46.505+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "3.3904ms"}
+[2023-05-11T18:25:53.323+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:25:53.323+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:26:05.574+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:26:18.542+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:26:18.545+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.8826ms"}
+[2023-05-11T18:26:37.765+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:26:37.767+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "", "ip": "::1", "errors": "", "cost": "1.4603ms"}
+[2023-05-11T18:27:06.961+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：7770001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:27:06.963+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=777", "ip": "::1", "errors": "", "cost": "1.7813ms"}
+[2023-05-11T18:27:13.421+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：07770001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:27:13.423+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=777", "ip": "::1", "errors": "", "cost": "1.5901ms"}
+[2023-05-11T18:27:31.536+0800]	[ INFO]	[           api/blog_api.go:151]	开始查询类别为诗歌的博客
+[2023-05-11T18:27:31.536+0800]	[ INFO]	[   service/blog_service.go:133]	开始查询类别为诗歌的博客
+[2023-05-11T18:27:31.537+0800]	[ INFO]	[   service/blog_service.go:147]	查询博客成功:&[{9 haha hehe 2021-02-24 17:11:44 +0800 CST 20 1 lisi 13456789 1 诗歌} {14 777 777 2021-02-25 12:10:49 +0800 CST 10 0   1 诗歌} {15 7756556 56565656 2021-02-25 12:13:38 +0800 CST 0 1 lisi 13456789 1 诗歌}]
+[2023-05-11T18:27:31.537+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithCategoryName	{"status": 200, "method": "POST", "path": "/blog/blogWithCategoryName", "query": "categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.0457ms"}
+[2023-05-11T18:27:43.425+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:27:43.428+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.1424ms"}
+[2023-05-11T18:28:49.597+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:28:49.597+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:29:02.170+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:29:10.855+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:29:10.858+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.7339ms"}
+[2023-05-11T18:30:14.565+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:30:14.568+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.9044ms"}
+[2023-05-11T18:30:29.428+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 50 0
+[2023-05-11T18:30:29.430+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&min=50", "ip": "::1", "errors": "", "cost": "1.9437ms"}
+[2023-05-11T18:31:17.668+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:31:17.668+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:31:30.051+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:31:32.098+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 50 0
+[2023-05-11T18:31:32.100+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&min=50", "ip": "::1", "errors": "", "cost": "2.6126ms"}
+[2023-05-11T18:31:50.713+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：168880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:31:50.715+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=16&title=888", "ip": "::1", "errors": "", "cost": "1.9277ms"}
+[2023-05-11T18:31:57.155+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:31:57.157+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888", "ip": "::1", "errors": "", "cost": "1.3973ms"}
+[2023-05-11T18:32:18.397+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:32:18.399+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30", "ip": "::1", "errors": "", "cost": "1.6126ms"}
+[2023-05-11T18:33:56.490+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:33:56.490+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:34:08.610+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:34:08.719+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0 0
+[2023-05-11T18:34:08.722+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30", "ip": "::1", "errors": "", "cost": "2.1713ms"}
+[2023-05-11T18:35:11.736+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:35:11.738+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.0319ms"}
+[2023-05-11T18:39:25.924+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:39:25.924+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:39:38.027+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:40:47.383+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-11T18:40:47.383+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-11T18:40:59.810+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-11T18:41:04.878+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08880001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:41:04.880+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "2.0494ms"}
+[2023-05-11T18:41:21.123+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:41:21.124+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.5808ms"}
+[2023-05-11T18:41:30.041+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 50 0诗歌
+[2023-05-11T18:41:30.042+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30&min=50&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.5614ms"}
+[2023-05-11T18:41:33.292+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0 10诗歌
+[2023-05-11T18:41:33.293+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30&max=10&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "986.5µs"}
+[2023-05-11T18:41:36.222+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0 50诗歌
+[2023-05-11T18:41:36.224+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30&max=50&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.2225ms"}
+[2023-05-11T18:41:40.889+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:41:40.891+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.3023ms"}
+[2023-05-11T18:41:47.312+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0 50诗歌
+[2023-05-11T18:41:47.313+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 500, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30&max=50&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.2629ms"}
+[2023-05-11T18:41:50.101+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：08882021-02-28 15:56:30 +0800 CST 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:41:50.102+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=888&begin=2021-02-28%2015%3A56%3A30&max=0&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.0249ms"}
+[2023-05-11T18:42:12.475+0800]	[ INFO]	[           api/blog_api.go:120]	开始查询最小阅读量10到最大阅读量50的博客
+[2023-05-11T18:42:12.475+0800]	[ INFO]	[   service/blog_service.go:107]	开始查询最小阅读量10到最大阅读量50的博客
+[2023-05-11T18:42:12.475+0800]	[ INFO]	[   service/blog_service.go:118]	查询博客成功:&[{9 haha hehe 2021-02-24 17:11:44 +0800 CST 20 1 lisi 13456789 1 诗歌} {10 hoho xixi 2021-02-24 17:11:47 +0800 CST 12 10 zhangsan 2323 2 散文} {11 测试文章 测试内容 2021-02-25 09:50:57 +0800 CST 22 1 lisi 13456789 3 小说}]
+[2023-05-11T18:42:12.475+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithReadCount	{"status": 200, "method": "POST", "path": "/blog/blogWithReadCount", "query": "min=10&max=50", "ip": "::1", "errors": "", "cost": "940.1µs"}
+[2023-05-11T18:42:23.782+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0诗歌
+[2023-05-11T18:42:23.783+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "max=0&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.372ms"}
+[2023-05-11T18:42:30.660+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 10 0诗歌
+[2023-05-11T18:42:30.661+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "min=10&categoryName=%E8%AF%97%E6%AD%8C", "ip": "::1", "errors": "", "cost": "1.1708ms"}
+[2023-05-11T18:42:37.671+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：00001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 10 50
+[2023-05-11T18:42:37.672+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "min=10&max=50", "ip": "::1", "errors": "", "cost": "782.6µs"}

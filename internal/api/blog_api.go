@@ -14,7 +14,7 @@ var BlogApi = new(blogApi)
 
 type blogApi struct{}
 
-// GetAllBlog 用户注册
+// GetAllBlog 获取所有博客
 //
 //	@Summary		Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
 //	@Description	Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
@@ -102,8 +102,8 @@ func (blogApi) BlogWithPostTime(c *gin.Context) {
 
 // BlogWithReadCount 以阅读量为条件的查询接口
 //
-//	@Summary		Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
-//	@Description	Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+//	@Summary		以阅读量为条件的查询接口
+//	@Description	以阅读量为条件的查询接口
 //	@Tags			blogApi
 //	@Accept			mpfd
 //	@Produce		json
@@ -131,4 +131,82 @@ func (blogApi) BlogWithReadCount(c *gin.Context) {
 		}
 	}
 
+}
+
+// BlogWithCategoryName 以阅读量为条件的查询接口
+//
+//	@Summary		以文章类别为条件的查询接口
+//	@Description	以文章类别为条件的查询接口
+//	@Tags			blogApi
+//	@Accept			mpfd
+//	@Produce		json
+//	@Param			categoryName	query		string			true	"文章类别名"
+//	@Success		200				{object}	swagger.HttpOk	"OK"
+//	@Failure		400				{object}	swagger.Http400	"Bad Request"
+//	@Failure		404				{object}	swagger.Http404	"Page Not Found"
+//	@Failure		500				{object}	swagger.Http500	"InternalError"
+//	@Router			/blog/blogWithCategoryName [post]
+func (blogApi) BlogWithCategoryName(c *gin.Context) {
+	categoryName := c.Query("categoryName")
+	zap.S().Infof("开始查询类别为%s的博客", categoryName)
+	blog, err := service.BlogService.BlogWithCategoryName(categoryName)
+	if err != nil {
+		zap.Error(err)
+	} else {
+		if blog != nil {
+			resp.Ok(c, "查询文章成功", &blog)
+		} else {
+			resp.InternalServerError(c, "查询文章失败")
+		}
+	}
+
+}
+
+// BlogWithMoreCondition 一堆条件的查询接口
+//
+//	@Summary		一堆条件的查询接口
+//	@Description	一堆条件的查询接口
+//	@Tags			blogApi
+//	@Accept			mpfd
+//	@Produce		json
+//	@Param			blogId			query		int				false	"博客ID"
+//	@Param			title			query		string			false	"文章标题"
+//	@Param			begin			query		string			false	"发布最早时间"
+//	@Param			end				query		string			false	"发布最晚时间"
+//	@Param			min				query		int32			false	"阅读最小次数"
+//	@Param			max				query		int32			false	"阅读最多次数"
+//	@Param			categoryName	query		string			false	"文章分类"
+//	@Success		200				{object}	swagger.HttpOk	"OK"
+//	@Failure		400				{object}	swagger.Http400	"Bad Request"
+//	@Failure		404				{object}	swagger.Http404	"Page Not Found"
+//	@Failure		500				{object}	swagger.Http500	"InternalError"
+//	@Router			/blog/blogWithMoreCondition [post]
+func (blogApi) BlogWithMoreCondition(c *gin.Context) {
+	blogId := c.Query("blogId")
+	blogID, _ := strconv.Atoi(blogId)
+
+	title := c.Query("title")
+
+	begin := c.Query("begin")
+	end := c.Query("end")
+	beginTime, _ := time.ParseInLocation(ctime.TimeLayout, begin, time.Local)
+	endTime, _ := time.ParseInLocation(ctime.TimeLayout, end, time.Local)
+
+	min := c.Query("min")
+	max := c.Query("max")
+	minR, _ := strconv.Atoi(min)
+	maxR, _ := strconv.Atoi(max)
+
+	categoryName := c.Query("categoryName")
+
+	blog, err := service.BlogService.BlogWithMoreCondition(int32(blogID), title, beginTime, endTime, int32(minR), int32(maxR), categoryName)
+	if err != nil {
+		zap.Error(err)
+	} else {
+		if blog != nil {
+			resp.Ok(c, "查询文章成功", &blog)
+		} else {
+			resp.InternalServerError(c, "查询文章失败")
+		}
+	}
 }

@@ -4,6 +4,141 @@
         "contact": {}
     },
     "paths": {
+        "/blog/blogWithCategoryName": {
+            "post": {
+                "description": "以文章类别为条件的查询接口",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "blogApi"
+                ],
+                "summary": "以文章类别为条件的查询接口",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "文章类别名",
+                        "name": "categoryName",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
+        "/blog/blogWithMoreCondition": {
+            "post": {
+                "description": "一堆条件的查询接口",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "blogApi"
+                ],
+                "summary": "一堆条件的查询接口",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "博客ID",
+                        "name": "blogId",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "文章标题",
+                        "name": "title",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "发布最早时间",
+                        "name": "begin",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "发布最晚时间",
+                        "name": "end",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "阅读最小次数",
+                        "name": "min",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "阅读最多次数",
+                        "name": "max",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "文章分类",
+                        "name": "categoryName",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
         "/blog/blogWithPostTime": {
             "post": {
                 "description": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",
@@ -63,7 +198,7 @@
         },
         "/blog/blogWithReadCount": {
             "post": {
-                "description": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",
+                "description": "以阅读量为条件的查询接口",
                 "consumes": [
                     "multipart/form-data"
                 ],
@@ -73,7 +208,7 @@
                 "tags": [
                     "blogApi"
                 ],
-                "summary": "Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中",
+                "summary": "以阅读量为条件的查询接口",
                 "parameters": [
                     {
                         "type": "integer",

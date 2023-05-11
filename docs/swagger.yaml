@@ -53,6 +53,95 @@ definitions:
 info:
   contact: {}
 paths:
+  /blog/blogWithCategoryName:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 以文章类别为条件的查询接口
+      parameters:
+      - description: 文章类别名
+        in: query
+        name: categoryName
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: 以文章类别为条件的查询接口
+      tags:
+      - blogApi
+  /blog/blogWithMoreCondition:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 一堆条件的查询接口
+      parameters:
+      - description: 博客ID
+        in: query
+        name: blogId
+        type: integer
+      - description: 文章标题
+        in: query
+        name: title
+        type: string
+      - description: 发布最早时间
+        in: query
+        name: begin
+        type: string
+      - description: 发布最晚时间
+        in: query
+        name: end
+        type: string
+      - description: 阅读最小次数
+        in: query
+        name: min
+        type: integer
+      - description: 阅读最多次数
+        in: query
+        name: max
+        type: integer
+      - description: 文章分类
+        in: query
+        name: categoryName
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: 一堆条件的查询接口
+      tags:
+      - blogApi
   /blog/blogWithPostTime:
     post:
       consumes:
@@ -95,7 +184,7 @@ paths:
     post:
       consumes:
       - multipart/form-data
-      description: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      description: 以阅读量为条件的查询接口
       parameters:
       - description: 最小阅读量
         in: query
@@ -126,7 +215,7 @@ paths:
           description: InternalError
           schema:
             $ref: '#/definitions/swagger.Http500'
-      summary: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
+      summary: 以阅读量为条件的查询接口
       tags:
       - blogApi
   /blog/blogWithTitle:
