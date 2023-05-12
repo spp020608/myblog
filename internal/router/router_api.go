@@ -62,5 +62,6 @@ func setupApiRouter(r *gin.Engine) {
 	commentGroup := r.Group("/comment")
 	{
 		commentGroup.POST("/addComment", api.CommentApi.AddComment)
+		commentGroup.POST("/delComment", api.CommentApi.DelComment)
 	}
 }

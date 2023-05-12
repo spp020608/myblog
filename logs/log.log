@@ -3624,3 +3624,821 @@ runtime.main
 [2023-05-12T16:39:44.595+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/addComment	{"status": 200, "method": "POST", "path": "/comment/addComment", "query": "", "ip": "::1", "errors": "", "cost": "4.5525ms"}
 [2023-05-12T16:40:26.665+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
 [2023-05-12T16:40:26.665+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T21:45:38.013+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T21:45:39.189+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "760.2µs"}
+[2023-05-12T21:45:39.241+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "817.9µs"}
+[2023-05-12T21:45:39.245+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "127.0.0.1", "errors": "", "cost": "0s"}
+[2023-05-12T21:45:39.245+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.0606ms"}
+[2023-05-12T21:45:39.555+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "174.4µs"}
+[2023-05-12T21:45:39.800+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "184µs"}
+[2023-05-12T21:45:51.732+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 10
+
+[2023-05-12T21:45:51.739+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=10", "ip": "::1", "errors": "", "cost": "7.5623ms"}
+[2023-05-12T21:45:59.451+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 18
+
+[2023-05-12T21:45:59.453+0800]	[ INFO]	[ service/comment_service.go:66]	未找到要删除的评论
+[2023-05-12T21:45:59.453+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=18", "ip": "::1", "errors": "", "cost": "1.0586ms"}
+[2023-05-12T21:46:10.081+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:46:10.083+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "2.4038ms"}
+[2023-05-12T21:46:39.641+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T21:46:39.641+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T21:46:51.567+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T21:46:58.110+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:46:58.111+0800]	[ERROR]	[ service/comment_service.go:66]	未找到要删除的评论
+myblog/internal/service.commentService.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:66
+myblog/internal/api.commentApi.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T21:46:58.111+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "1.2663ms"}
+[2023-05-12T21:46:59.151+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:46:59.153+0800]	[ERROR]	[ service/comment_service.go:66]	未找到要删除的评论
+myblog/internal/service.commentService.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:66
+myblog/internal/api.commentApi.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T21:46:59.153+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "1.7604ms"}
+[2023-05-12T21:46:59.669+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:46:59.671+0800]	[ERROR]	[ service/comment_service.go:66]	未找到要删除的评论
+myblog/internal/service.commentService.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:66
+myblog/internal/api.commentApi.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T21:46:59.672+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "2.1468ms"}
+[2023-05-12T21:46:59.871+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:46:59.872+0800]	[ERROR]	[ service/comment_service.go:66]	未找到要删除的评论
+myblog/internal/service.commentService.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:66
+myblog/internal/api.commentApi.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T21:46:59.872+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "700.1µs"}
+[2023-05-12T21:47:00.042+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:47:00.043+0800]	[ERROR]	[ service/comment_service.go:66]	未找到要删除的评论
+myblog/internal/service.commentService.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:66
+myblog/internal/api.commentApi.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T21:47:00.043+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "1.0498ms"}
+[2023-05-12T21:47:00.217+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:47:00.218+0800]	[ERROR]	[ service/comment_service.go:66]	未找到要删除的评论
+myblog/internal/service.commentService.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:66
+myblog/internal/api.commentApi.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T21:47:00.218+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "917.2µs"}
+[2023-05-12T21:47:00.362+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:47:00.363+0800]	[ERROR]	[ service/comment_service.go:66]	未找到要删除的评论
+myblog/internal/service.commentService.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:66
+myblog/internal/api.commentApi.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T21:47:00.363+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "749.4µs"}
+[2023-05-12T21:47:00.501+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:47:00.502+0800]	[ERROR]	[ service/comment_service.go:66]	未找到要删除的评论
+myblog/internal/service.commentService.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:66
+myblog/internal/api.commentApi.DelComment
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T21:47:00.502+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "760.1µs"}
+[2023-05-12T21:48:15.516+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T21:48:15.516+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T21:48:27.601+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T21:48:27.648+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:48:27.649+0800]	[ INFO]	[ service/comment_service.go:66]	未找到要删除的评论
+[2023-05-12T21:48:27.649+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "1.3757ms"}
+[2023-05-12T21:48:32.485+0800]	[ INFO]	[ service/comment_service.go:58]	要删除评论ID为: 9
+
+[2023-05-12T21:48:32.486+0800]	[ INFO]	[ service/comment_service.go:66]	未找到要删除的评论
+[2023-05-12T21:48:32.486+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/delComment	{"status": 200, "method": "POST", "path": "/comment/delComment", "query": "commentID=9", "ip": "::1", "errors": "", "cost": "1.1004ms"}
+[2023-05-12T21:52:33.461+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T21:52:33.461+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T22:38:13.807+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T22:38:22.371+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "793.7µs"}
+[2023-05-12T22:38:22.439+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "774.6µs"}
+[2023-05-12T22:38:22.458+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "125.1µs"}
+[2023-05-12T22:38:22.459+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "915.8µs"}
+[2023-05-12T22:38:22.834+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "1.0022ms"}
+[2023-05-12T22:38:23.134+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-12T22:38:36.318+0800]	[ INFO]	[            api/blog_api.go:32]	query:1
+[2023-05-12T22:38:36.319+0800]	[ INFO]	[    service/blog_service.go:23]	开始正序查询所有博客
+[2023-05-12T22:38:36.322+0800]	[ERROR]	[    service/blog_service.go:31]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:31
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:38:36.322+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "3.8228ms"}
+[2023-05-12T22:42:09.422+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T22:42:09.422+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T22:42:24.248+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T22:42:30.946+0800]	[ INFO]	[            api/blog_api.go:32]	query:1
+[2023-05-12T22:42:30.947+0800]	[ INFO]	[    service/blog_service.go:23]	开始正序查询所有博客
+[2023-05-12T22:42:30.949+0800]	[ INFO]	[    service/blog_service.go:34]	查询所有博客成功
+[2023-05-12T22:42:30.949+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "2.5948ms"}
+[2023-05-12T22:43:51.013+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T22:43:51.013+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T22:44:11.034+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T22:45:01.890+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T22:45:01.890+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T22:45:14.094+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T22:45:30.285+0800]	[ INFO]	[            api/blog_api.go:32]	query:1
+[2023-05-12T22:45:30.285+0800]	[ INFO]	[    service/blog_service.go:23]	开始正序查询所有博客
+[2023-05-12T22:45:30.287+0800]	[ INFO]	[    service/blog_service.go:34]	查询所有博客成功
+[2023-05-12T22:45:30.287+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "1.9949ms"}
+[2023-05-12T22:45:53.397+0800]	[ INFO]	[            api/blog_api.go:32]	query:1
+[2023-05-12T22:45:53.397+0800]	[ INFO]	[    service/blog_service.go:23]	开始正序查询所有博客
+[2023-05-12T22:45:53.398+0800]	[ INFO]	[    service/blog_service.go:34]	查询所有博客成功
+[2023-05-12T22:45:53.398+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=1", "ip": "::1", "errors": "", "cost": "1.1523ms"}
+[2023-05-12T22:45:57.652+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:45:57.652+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:45:57.653+0800]	[ INFO]	[    service/blog_service.go:46]	查询所有博客成功
+[2023-05-12T22:45:57.653+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.4316ms"}
+[2023-05-12T22:48:02.282+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:48:02.283+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:48:02.284+0800]	[ INFO]	[    service/blog_service.go:46]	查询所有博客成功
+[2023-05-12T22:48:02.284+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.613ms"}
+[2023-05-12T22:50:15.262+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T22:50:15.262+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T22:50:27.660+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T22:51:54.343+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:51:54.343+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:51:54.345+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field User: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:51:54.345+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "2.5625ms"}
+[2023-05-12T22:53:01.809+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T22:53:01.809+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T22:53:14.039+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T22:53:15.885+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:15.885+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:15.887+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:15.887+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "2.2851ms"}
+[2023-05-12T22:53:16.549+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:16.549+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:16.551+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:16.551+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.5307ms"}
+[2023-05-12T22:53:17.109+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:17.110+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:17.111+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:17.111+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.9955ms"}
+[2023-05-12T22:53:17.379+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:17.380+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:17.381+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:17.381+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.9946ms"}
+[2023-05-12T22:53:17.540+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:17.541+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:17.542+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:17.542+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "2.0396ms"}
+[2023-05-12T22:53:17.705+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:17.705+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:17.706+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:17.706+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "997.2µs"}
+[2023-05-12T22:53:17.872+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:17.872+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:17.873+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:17.873+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "995.7µs"}
+[2023-05-12T22:53:18.054+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:18.054+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:18.055+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:18.055+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.7635ms"}
+[2023-05-12T22:53:18.211+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:18.211+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:18.212+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:18.212+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "997.9µs"}
+[2023-05-12T22:53:18.386+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:18.387+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:18.388+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:18.388+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.7237ms"}
+[2023-05-12T22:53:18.520+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:18.520+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:18.522+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:18.522+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.6201ms"}
+[2023-05-12T22:53:18.688+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:18.688+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:18.689+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:18.689+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.6608ms"}
+[2023-05-12T22:53:18.865+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:18.865+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:18.866+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:18.866+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.3109ms"}
+[2023-05-12T22:53:19.030+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:19.031+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:19.032+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:19.032+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.8092ms"}
+[2023-05-12T22:53:19.198+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:19.198+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:19.200+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:19.200+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.6372ms"}
+[2023-05-12T22:53:19.326+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:53:19.326+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:53:19.328+0800]	[ERROR]	[    service/blog_service.go:43]	查询所有博客失败invalid field found for struct myblog/model/vo.FirstBlog's field Category: define a valid foreign key for relations or implement the Valuer/Scanner interface
+myblog/internal/service.blogService.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/service/blog_service.go:43
+myblog/internal/api.blogApi.GetAllBlog
+	C:/Users/86133/GolandProjects/myblog/internal/api/blog_api.go:33
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-12T22:53:19.328+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 500, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "2.1207ms"}
+[2023-05-12T22:54:20.569+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T22:54:20.569+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T22:54:32.907+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T22:54:41.419+0800]	[ INFO]	[            api/blog_api.go:32]	query:0
+[2023-05-12T22:54:41.419+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
+[2023-05-12T22:54:41.421+0800]	[ INFO]	[    service/blog_service.go:46]	查询所有博客成功
+[2023-05-12T22:54:41.421+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.8524ms"}

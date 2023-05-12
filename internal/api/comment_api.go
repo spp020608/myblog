@@ -7,6 +7,7 @@ import (
 	"myblog/internal/service"
 	"myblog/model/dto"
 	"myblog/pkg/validate"
+	"strconv"
 )
 
 var CommentApi = new(commentApi)
@@ -45,4 +46,35 @@ func (commentApi) AddComment(c *gin.Context) {
 		return
 	}
 	resp.Ok(c, "添加评论成功", addComment)
+}
+
+// DelComment 添加评论
+//
+//	@Summary		删除评论
+//	@Description	删除评论
+//	@Tags			commentApi
+//	@Accept			mpfd
+//	@Produce		json
+//	@Param			commentID	query		int32			true	"commentID"
+//	@Success		200			{object}	swagger.HttpOk	"OK"
+//	@Failure		400			{object}	swagger.Http400	"Bad Request"
+//	@Failure		404			{object}	swagger.Http404	"Page Not Found"
+//	@Failure		500			{object}	swagger.Http500	"InternalError"
+//	@Router			/comment/delComment [post]
+func (commentApi) DelComment(c *gin.Context) {
+
+	query := c.Query("commentID")
+	commentID, _ := strconv.Atoi(query)
+	comment, err := service.CommentService.DelComment(int32(commentID))
+	if err != nil {
+		zap.S().Errorf("删除评论失败: %s\n", err)
+		resp.InternalServerError(c, "删除评论失败")
+		return
+	}
+	if comment != 0 {
+		resp.Ok(c, "删除评论成功", comment)
+	} else {
+		resp.NoData(c)
+	}
+
 }

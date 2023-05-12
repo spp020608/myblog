@@ -327,6 +327,39 @@ paths:
       summary: 添加评论
       tags:
       - commentApi
+  /comment/delComment:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 删除评论
+      parameters:
+      - description: commentID
+        in: query
+        name: commentID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: 删除评论
+      tags:
+      - commentApi
   /example/getAuthorizationHeader:
     get:
       consumes:

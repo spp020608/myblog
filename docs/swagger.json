@@ -417,6 +417,56 @@
                 }
             }
         },
+        "/comment/delComment": {
+            "post": {
+                "description": "删除评论",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "commentApi"
+                ],
+                "summary": "删除评论",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "commentID",
+                        "name": "commentID",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
         "/example/getAuthorizationHeader": {
             "get": {
                 "description": "Get 请求, 请求参数是 URL 的一部分",
