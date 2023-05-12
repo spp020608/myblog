@@ -11,7 +11,6 @@ import (
 	"myblog/internal/repository/cache"
 	"myblog/model/dto"
 	"myblog/pkg/config"
-	"myblog/pkg/ctime"
 	"myblog/pkg/util"
 	"time"
 )
@@ -52,7 +51,7 @@ func (userService) Register(registerParam *dto.RegisterParam) (rowsAffected int6
 		Username:   registerParam.Username,
 		Password:   hashedPassword,
 		Tel:        registerParam.Tel,
-		CreateTime: ctime.CTime{Time: time.Now()}.Time,
+		CreateTime: time.Now(),
 		IsDelete:   0,
 	}
 

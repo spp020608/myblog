@@ -59,4 +59,8 @@ func setupApiRouter(r *gin.Engine) {
 		blogGroup.POST("/blogWithCategoryName", api.BlogApi.BlogWithCategoryName)
 		blogGroup.POST("/blogWithMoreCondition", api.BlogApi.BlogWithMoreCondition)
 	}
+	commentGroup := r.Group("/comment")
+	{
+		commentGroup.POST("/addComment", api.CommentApi.AddComment)
+	}
 }

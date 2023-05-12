@@ -284,6 +284,49 @@ paths:
       summary: Post 请求, 发送 multipart/form-data 类型的表单数据, 参数在消息体中
       tags:
       - blogApi
+  /comment/addComment:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 添加评论
+      parameters:
+      - description: 评论内容
+        in: formData
+        name: content
+        required: true
+        type: string
+      - description: 用户ID
+        in: formData
+        name: userID
+        required: true
+        type: integer
+      - description: BlogID
+        in: formData
+        name: blogID
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: 添加评论
+      tags:
+      - commentApi
   /example/getAuthorizationHeader:
     get:
       consumes:

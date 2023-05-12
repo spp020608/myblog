@@ -3568,3 +3568,59 @@ runtime.main
 [2023-05-11T20:39:40.608+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "title=777", "ip": "::1", "errors": "", "cost": "649.5µs"}
 [2023-05-11T20:39:46.890+0800]	[ INFO]	[   service/blog_service.go:154]	开始查询博客的条件为：257770001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0 0
 [2023-05-11T20:39:46.891+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/blogWithMoreCondition	{"status": 200, "method": "POST", "path": "/blog/blogWithMoreCondition", "query": "blogId=25&title=777", "ip": "::1", "errors": "", "cost": "1.0023ms"}
+[2023-05-12T16:23:29.952+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T16:23:47.322+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "155.4µs"}
+[2023-05-12T16:23:47.390+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "990.5µs"}
+[2023-05-12T16:23:47.394+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "504.2µs"}
+[2023-05-12T16:23:47.395+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "2.3038ms"}
+[2023-05-12T16:23:47.632+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "489.8µs"}
+[2023-05-12T16:24:50.755+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T16:24:50.755+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T16:25:10.519+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T16:25:16.174+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "543.9µs"}
+[2023-05-12T16:25:16.207+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "804µs"}
+[2023-05-12T16:25:16.210+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.6295ms"}
+[2023-05-12T16:25:16.211+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "793.5µs"}
+[2023-05-12T16:25:16.331+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "876.5µs"}
+[2023-05-12T16:25:16.346+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "329.9µs"}
+[2023-05-12T16:26:51.849+0800]	[ INFO]	[ service/comment_service.go:29]	要增加评论为: &{0  0001-01-01 00:00:00 +0000 UTC 0 0}
+
+[2023-05-12T16:26:51.863+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/addComment	{"status": 200, "method": "POST", "path": "/comment/addComment", "query": "", "ip": "::1", "errors": "", "cost": "14.313ms"}
+[2023-05-12T16:38:32.989+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T16:38:32.989+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T16:38:45.463+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T16:38:52.467+0800]	[ INFO]	[ service/comment_service.go:30]	要增加评论为: &{0 什么东西 0001-01-01 00:00:00 +0000 UTC 0 0}
+
+[2023-05-12T16:38:52.471+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/addComment	{"status": 200, "method": "POST", "path": "/comment/addComment", "query": "", "ip": "::1", "errors": "", "cost": "5.0708ms"}
+[2023-05-12T16:39:30.293+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T16:39:30.293+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-12T16:39:42.964+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-12T16:39:44.591+0800]	[ INFO]	[ service/comment_service.go:30]	要增加评论为: &{0 什么东西 0001-01-01 00:00:00 +0000 UTC 14 13}
+
+[2023-05-12T16:39:44.595+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/addComment	{"status": 200, "method": "POST", "path": "/comment/addComment", "query": "", "ip": "::1", "errors": "", "cost": "4.5525ms"}
+[2023-05-12T16:40:26.665+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T16:40:26.665+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
