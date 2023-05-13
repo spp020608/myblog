@@ -4,8 +4,6 @@ import (
 	"myblog/pkg/ctime"
 )
 
-//目前bug 分层定义结构体的话 user和category绑定不进去输出
-
 type FirstBlog struct {
 	BlogID    int32       `gorm:"column:blog_id;primaryKey;autoIncrement:true;comment:主键" json:"blog_id"`
 	Title     string      `gorm:"column:title;not null;comment:标题" json:"title"`

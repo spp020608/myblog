@@ -327,6 +327,39 @@ paths:
       summary: 添加评论
       tags:
       - commentApi
+  /comment/countCommentByBlogId:
+    post:
+      consumes:
+      - multipart/form-data
+      description: Post 开始统计BlogId下的评论数量
+      parameters:
+      - description: 输入BlogId查询
+        in: query
+        name: BlogId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: Post 开始统计BlogId下的评论数量
+      tags:
+      - commentApi
   /comment/delComment:
     post:
       consumes:
@@ -358,6 +391,110 @@ paths:
           schema:
             $ref: '#/definitions/swagger.Http500'
       summary: 删除评论
+      tags:
+      - commentApi
+  /comment/queryCommentByBlogId:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 提供以BlogId为查询条件的查询接口
+      parameters:
+      - description: 输入BlogId查询
+        in: query
+        name: BlogId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: 提供以BlogId为查询条件的查询接口
+      tags:
+      - commentApi
+  /comment/queryCommentByUserId:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 提供以UserId为查询条件的查询接口
+      parameters:
+      - description: 输入UserId查询
+        in: query
+        name: UserId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: 提供以UserId为查询条件的查询接口
+      tags:
+      - commentApi
+  /comment/updateComment:
+    post:
+      consumes:
+      - multipart/form-data
+      description: 修改评论
+      parameters:
+      - description: 评论ID
+        in: formData
+        name: commentID
+        required: true
+        type: integer
+      - description: 评论内容
+        in: formData
+        name: content
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/swagger.HttpOk'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/swagger.Http400'
+        "404":
+          description: Page Not Found
+          schema:
+            $ref: '#/definitions/swagger.Http404'
+        "500":
+          description: InternalError
+          schema:
+            $ref: '#/definitions/swagger.Http500'
+      summary: 修改评论
       tags:
       - commentApi
   /example/getAuthorizationHeader:

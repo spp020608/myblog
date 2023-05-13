@@ -429,6 +429,56 @@ const docTemplate = `{
                 }
             }
         },
+        "/comment/countCommentByBlogId": {
+            "post": {
+                "description": "Post 开始统计BlogId下的评论数量",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "commentApi"
+                ],
+                "summary": "Post 开始统计BlogId下的评论数量",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "输入BlogId查询",
+                        "name": "BlogId",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
         "/comment/delComment": {
             "post": {
                 "description": "删除评论",
@@ -448,6 +498,163 @@ const docTemplate = `{
                         "description": "commentID",
                         "name": "commentID",
                         "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
+        "/comment/queryCommentByBlogId": {
+            "post": {
+                "description": "提供以BlogId为查询条件的查询接口",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "commentApi"
+                ],
+                "summary": "提供以BlogId为查询条件的查询接口",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "输入BlogId查询",
+                        "name": "BlogId",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
+        "/comment/queryCommentByUserId": {
+            "post": {
+                "description": "提供以UserId为查询条件的查询接口",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "commentApi"
+                ],
+                "summary": "提供以UserId为查询条件的查询接口",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "输入UserId查询",
+                        "name": "UserId",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.HttpOk"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http400"
+                        }
+                    },
+                    "404": {
+                        "description": "Page Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http404"
+                        }
+                    },
+                    "500": {
+                        "description": "InternalError",
+                        "schema": {
+                            "$ref": "#/definitions/swagger.Http500"
+                        }
+                    }
+                }
+            }
+        },
+        "/comment/updateComment": {
+            "post": {
+                "description": "修改评论",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "commentApi"
+                ],
+                "summary": "修改评论",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "评论ID",
+                        "name": "commentID",
+                        "in": "formData",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "评论内容",
+                        "name": "content",
+                        "in": "formData",
                         "required": true
                     }
                 ],

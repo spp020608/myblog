@@ -4442,3 +4442,196 @@ runtime.main
 [2023-05-12T22:54:41.419+0800]	[ INFO]	[    service/blog_service.go:39]	开始逆序查询所有博客
 [2023-05-12T22:54:41.421+0800]	[ INFO]	[    service/blog_service.go:46]	查询所有博客成功
 [2023-05-12T22:54:41.421+0800]	[ INFO]	[       middleware/logger.go:26]	/blog/getAllBlog	{"status": 200, "method": "POST", "path": "/blog/getAllBlog", "query": "sort=0", "ip": "::1", "errors": "", "cost": "1.8524ms"}
+[2023-05-12T22:57:17.707+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-12T22:57:17.707+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-13T11:45:54.720+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-13T11:45:58.240+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "997.3µs"}
+[2023-05-13T11:45:58.296+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "265.2µs"}
+[2023-05-13T11:45:58.299+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.267ms"}
+[2023-05-13T11:45:58.303+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "997.7µs"}
+[2023-05-13T11:45:58.511+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "775.8µs"}
+[2023-05-13T11:46:10.299+0800]	[ INFO]	[ service/comment_service.go:83]	要删除评论ID为: 0
+
+[2023-05-13T11:46:10.304+0800]	[ INFO]	[ service/comment_service.go:91]	未找到要修改的评论
+[2023-05-13T11:46:10.304+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/updateComment	{"status": 200, "method": "POST", "path": "/comment/updateComment", "query": "", "ip": "::1", "errors": "", "cost": "5.8829ms"}
+[2023-05-13T12:20:24.152+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-13T12:20:24.152+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-13T12:20:36.454+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-13T12:20:36.604+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "521.4µs"}
+[2023-05-13T12:20:36.629+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "756.4µs"}
+[2023-05-13T12:20:36.641+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.6542ms"}
+[2023-05-13T12:20:36.644+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "974.6µs"}
+[2023-05-13T12:20:36.836+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "299µs"}
+[2023-05-13T12:20:36.846+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-13T12:20:42.860+0800]	[ INFO]	[ service/comment_service.go:83]	要修改评论ID为: 0
+
+[2023-05-13T12:20:42.861+0800]	[ INFO]	[ service/comment_service.go:97]	未找到要修改的评论
+[2023-05-13T12:20:42.861+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/updateComment	{"status": 200, "method": "POST", "path": "/comment/updateComment", "query": "", "ip": "::1", "errors": "", "cost": "1.4013ms"}
+[2023-05-13T12:21:00.677+0800]	[ INFO]	[ service/comment_service.go:30]	要增加评论为: &{0 4534534 0001-01-01 00:00:00 +0000 UTC 15 11}
+
+[2023-05-13T12:21:00.681+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/addComment	{"status": 200, "method": "POST", "path": "/comment/addComment", "query": "", "ip": "::1", "errors": "", "cost": "4.34ms"}
+[2023-05-13T12:22:39.448+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-13T12:22:39.448+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-13T12:22:51.768+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-13T12:23:01.897+0800]	[ INFO]	[ service/comment_service.go:83]	要修改评论ID为: 15
+
+[2023-05-13T12:23:01.899+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/updateComment	{"status": 200, "method": "POST", "path": "/comment/updateComment", "query": "", "ip": "::1", "errors": "", "cost": "3.4625ms"}
+[2023-05-13T12:39:52.848+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-13T12:39:52.848+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-13T12:40:05.450+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-13T12:42:42.835+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "997.3µs"}
+[2023-05-13T12:42:42.902+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "50.9µs"}
+[2023-05-13T12:42:42.906+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.4672ms"}
+[2023-05-13T12:42:42.907+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "532.8µs"}
+[2023-05-13T12:42:43.139+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "1.0447ms"}
+[2023-05-13T12:42:54.870+0800]	[ INFO]	[        api/comment_api.go:132]	要查询的评论的BlogId为:9
+[2023-05-13T12:42:54.870+0800]	[ INFO]	[service/comment_service.go:114]	开始查询BlogId为9的博客
+[2023-05-13T12:42:54.871+0800]	[ERROR]	[service/comment_service.go:122]	查询评论失败Error 1054 (42S22): Unknown column 'category.category_id' in 'on clause'
+myblog/internal/service.commentService.QueryCommentByBlogId
+	C:/Users/86133/GolandProjects/myblog/internal/service/comment_service.go:122
+myblog/internal/api.commentApi.QueryCommentByBlogId
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:134
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-13T12:42:54.871+0800]	[ERROR]	[        api/comment_api.go:136]	查询发生错误Error 1054 (42S22): Unknown column 'category.category_id' in 'on clause'
+myblog/internal/api.commentApi.QueryCommentByBlogId
+	C:/Users/86133/GolandProjects/myblog/internal/api/comment_api.go:136
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+myblog/internal/router/middleware.ZapLoggerMiddleware.func1
+	C:/Users/86133/GolandProjects/myblog/internal/router/middleware/logger.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576
+net/http.serverHandler.ServeHTTP
+	C:/Go/go1.20.3/src/net/http/server.go:2936
+net/http.(*conn).serve
+	C:/Go/go1.20.3/src/net/http/server.go:1995
+[2023-05-13T12:42:54.871+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/queryCommentByBlogId	{"status": 200, "method": "POST", "path": "/comment/queryCommentByBlogId", "query": "BlogId=9", "ip": "::1", "errors": "", "cost": "1.4023ms"}
+[2023-05-13T12:45:19.880+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-13T12:45:19.880+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-13T12:45:32.226+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-13T12:45:34.068+0800]	[ INFO]	[        api/comment_api.go:132]	要查询的评论的BlogId为:9
+[2023-05-13T12:45:34.068+0800]	[ INFO]	[service/comment_service.go:114]	开始查询BlogId为9的博客
+[2023-05-13T12:45:34.070+0800]	[ INFO]	[service/comment_service.go:125]	查询评论成功:&[{1  2021-02-25 14:38:30 +0800 CST 14 666 333 9 haha} {2  2021-02-25 14:39:20 +0800 CST 15 666777 333 9 haha} {3  2021-02-25 16:10:59 +0800 CST 1 lisi 13456789 9 haha} {4  2021-02-25 16:11:26 +0800 CST 1 lisi 13456789 9 haha} {5  2021-02-25 16:12:27 +0800 CST 1 lisi 13456789 9 haha} {6  2021-02-25 16:19:19 +0800 CST 1 lisi 13456789 9 haha} {7  2021-02-25 16:19:38 +0800 CST 1 lisi 13456789 9 haha} {8  2021-02-25 16:22:16 +0800 CST 1 lisi 13456789 9 haha}]
+[2023-05-13T12:45:34.070+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/queryCommentByBlogId	{"status": 200, "method": "POST", "path": "/comment/queryCommentByBlogId", "query": "BlogId=9", "ip": "::1", "errors": "", "cost": "1.6608ms"}
+[2023-05-13T12:46:49.454+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-13T12:46:49.454+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-13T12:47:01.575+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-13T12:47:05.244+0800]	[ INFO]	[        api/comment_api.go:132]	要查询的评论的BlogId为:9
+[2023-05-13T12:47:05.244+0800]	[ INFO]	[service/comment_service.go:114]	开始查询BlogId为9的博客
+[2023-05-13T12:47:05.246+0800]	[ INFO]	[service/comment_service.go:125]	查询评论成功:&[{1 好文 2021-02-25 14:38:30 +0800 CST 14 666 333 9 haha} {2 hoho 2021-02-25 14:39:20 +0800 CST 15 666777 333 9 haha} {3 ssssss 2021-02-25 16:10:59 +0800 CST 1 lisi 13456789 9 haha} {4 tytytyttyty 2021-02-25 16:11:26 +0800 CST 1 lisi 13456789 9 haha} {5 sdfsdfsdf 2021-02-25 16:12:27 +0800 CST 1 lisi 13456789 9 haha} {6 kkkkk 2021-02-25 16:19:19 +0800 CST 1 lisi 13456789 9 haha} {7 ooooo 2021-02-25 16:19:38 +0800 CST 1 lisi 13456789 9 haha} {8 00000 2021-02-25 16:22:16 +0800 CST 1 lisi 13456789 9 haha}]
+[2023-05-13T12:47:05.246+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/queryCommentByBlogId	{"status": 200, "method": "POST", "path": "/comment/queryCommentByBlogId", "query": "BlogId=9", "ip": "::1", "errors": "", "cost": "1.6332ms"}
+[2023-05-13T14:11:26.676+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-13T14:11:26.676+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-13T14:11:54.369+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-13T14:11:58.606+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "780.6µs"}
+[2023-05-13T14:11:58.639+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "447.2µs"}
+[2023-05-13T14:11:58.645+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "504.4µs"}
+[2023-05-13T14:11:58.645+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.9372ms"}
+[2023-05-13T14:11:58.849+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "462.5µs"}
+[2023-05-13T14:11:59.007+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "337.7µs"}
+[2023-05-13T14:12:13.869+0800]	[ INFO]	[        api/comment_api.go:161]	开始统计BlogId为9下的评论数量
+[2023-05-13T14:12:13.869+0800]	[ INFO]	[service/comment_service.go:139]	开始统计BlogId为9下的评论数量
+[2023-05-13T14:12:13.869+0800]	[ INFO]	[service/comment_service.go:145]	统计评论数量成功:8
+[2023-05-13T14:12:13.869+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/countCommentByBlogId	{"status": 200, "method": "POST", "path": "/comment/countCommentByBlogId", "query": "BlogId=9", "ip": "::1", "errors": "", "cost": "759.7µs"}
+[2023-05-13T14:12:37.814+0800]	[ INFO]	[        api/comment_api.go:161]	开始统计BlogId为20下的评论数量
+[2023-05-13T14:12:37.815+0800]	[ INFO]	[service/comment_service.go:139]	开始统计BlogId为20下的评论数量
+[2023-05-13T14:12:37.815+0800]	[ INFO]	[service/comment_service.go:145]	统计评论数量成功:0
+[2023-05-13T14:12:37.815+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/countCommentByBlogId	{"status": 200, "method": "POST", "path": "/comment/countCommentByBlogId", "query": "BlogId=20", "ip": "::1", "errors": "", "cost": "792.5µs"}
+[2023-05-13T14:12:45.698+0800]	[ INFO]	[        api/comment_api.go:161]	开始统计BlogId为10下的评论数量
+[2023-05-13T14:12:45.699+0800]	[ INFO]	[service/comment_service.go:139]	开始统计BlogId为10下的评论数量
+[2023-05-13T14:12:45.700+0800]	[ INFO]	[service/comment_service.go:145]	统计评论数量成功:1
+[2023-05-13T14:12:45.700+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/countCommentByBlogId	{"status": 200, "method": "POST", "path": "/comment/countCommentByBlogId", "query": "BlogId=10", "ip": "::1", "errors": "", "cost": "1.4335ms"}
+[2023-05-13T14:12:48.228+0800]	[ INFO]	[        api/comment_api.go:161]	开始统计BlogId为11下的评论数量
+[2023-05-13T14:12:48.229+0800]	[ INFO]	[service/comment_service.go:139]	开始统计BlogId为11下的评论数量
+[2023-05-13T14:12:48.229+0800]	[ INFO]	[service/comment_service.go:145]	统计评论数量成功:2
+[2023-05-13T14:12:48.229+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/countCommentByBlogId	{"status": 200, "method": "POST", "path": "/comment/countCommentByBlogId", "query": "BlogId=11", "ip": "::1", "errors": "", "cost": "240.5µs"}
+[2023-05-13T14:17:48.160+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-13T14:17:48.160+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
+[2023-05-13T14:18:00.724+0800]	[ERROR]	[           router/router.go:39]	初始化 redis 连接失败: dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it.
+myblog/internal/router.NewHttpServer
+	C:/Users/86133/GolandProjects/myblog/internal/router/router.go:39
+main.main
+	C:/Users/86133/GolandProjects/myblog/main.go:40
+runtime.main
+	C:/Go/go1.20.3/src/runtime/proc.go:250
+[2023-05-13T14:18:16.034+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/index.html	{"status": 200, "method": "GET", "path": "/swagger/index.html", "query": "", "ip": "::1", "errors": "", "cost": "923µs"}
+[2023-05-13T14:18:16.058+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui.css	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui.css", "query": "", "ip": "::1", "errors": "", "cost": "0s"}
+[2023-05-13T14:18:16.062+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-bundle.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-bundle.js", "query": "", "ip": "::1", "errors": "", "cost": "1.6218ms"}
+[2023-05-13T14:18:16.070+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/swagger-ui-standalone-preset.js	{"status": 200, "method": "GET", "path": "/swagger/swagger-ui-standalone-preset.js", "query": "", "ip": "::1", "errors": "", "cost": "51.3µs"}
+[2023-05-13T14:18:16.259+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/favicon-32x32.png	{"status": 200, "method": "GET", "path": "/swagger/favicon-32x32.png", "query": "", "ip": "::1", "errors": "", "cost": "487.3µs"}
+[2023-05-13T14:18:16.284+0800]	[ INFO]	[       middleware/logger.go:26]	/swagger/doc.json	{"status": 200, "method": "GET", "path": "/swagger/doc.json", "query": "", "ip": "::1", "errors": "", "cost": "1.3181ms"}
+[2023-05-13T14:18:33.430+0800]	[ INFO]	[        api/comment_api.go:191]	要查询的评论的BlogId为:1
+[2023-05-13T14:18:33.430+0800]	[ INFO]	[service/comment_service.go:159]	开始查询UserId为1的博客
+[2023-05-13T14:18:33.432+0800]	[ INFO]	[service/comment_service.go:170]	查询评论成功:&[{3 ssssss 2021-02-25 16:10:59 +0800 CST 1 lisi 13456789 9 haha} {4 tytytyttyty 2021-02-25 16:11:26 +0800 CST 1 lisi 13456789 9 haha} {5 sdfsdfsdf 2021-02-25 16:12:27 +0800 CST 1 lisi 13456789 9 haha} {6 kkkkk 2021-02-25 16:19:19 +0800 CST 1 lisi 13456789 9 haha} {7 ooooo 2021-02-25 16:19:38 +0800 CST 1 lisi 13456789 9 haha} {8 00000 2021-02-25 16:22:16 +0800 CST 1 lisi 13456789 9 haha} {11 99999 2021-02-25 16:26:08 +0800 CST 1 lisi 13456789 10 hoho} {12 ffff 2021-02-25 16:31:47 +0800 CST 1 lisi 13456789 11 测试文章}]
+[2023-05-13T14:18:33.432+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/queryCommentByUserId	{"status": 200, "method": "POST", "path": "/comment/queryCommentByUserId", "query": "UserId=1", "ip": "::1", "errors": "", "cost": "2.0289ms"}
+[2023-05-13T14:18:44.287+0800]	[ INFO]	[        api/comment_api.go:191]	要查询的评论的BlogId为:20
+[2023-05-13T14:18:44.288+0800]	[ INFO]	[service/comment_service.go:159]	开始查询UserId为20的博客
+[2023-05-13T14:18:44.288+0800]	[ INFO]	[service/comment_service.go:170]	查询评论成功:<nil>
+[2023-05-13T14:18:44.288+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/queryCommentByUserId	{"status": 200, "method": "POST", "path": "/comment/queryCommentByUserId", "query": "UserId=20", "ip": "::1", "errors": "", "cost": "1.0268ms"}

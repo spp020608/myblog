@@ -63,5 +63,9 @@ func setupApiRouter(r *gin.Engine) {
 	{
 		commentGroup.POST("/addComment", api.CommentApi.AddComment)
 		commentGroup.POST("/delComment", api.CommentApi.DelComment)
+		commentGroup.POST("/updateComment", api.CommentApi.UpdateComment)
+		commentGroup.POST("/queryCommentByBlogId", api.CommentApi.QueryCommentByBlogId)
+		commentGroup.POST("/countCommentByBlogId", api.CommentApi.CountCommentByBlogId)
+		commentGroup.POST("/queryCommentByUserId", api.CommentApi.QueryCommentByUserId)
 	}
 }
