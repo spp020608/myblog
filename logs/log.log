@@ -4635,3 +4635,5 @@ runtime.main
 [2023-05-13T14:18:44.288+0800]	[ INFO]	[service/comment_service.go:159]	开始查询UserId为20的博客
 [2023-05-13T14:18:44.288+0800]	[ INFO]	[service/comment_service.go:170]	查询评论成功:<nil>
 [2023-05-13T14:18:44.288+0800]	[ INFO]	[       middleware/logger.go:26]	/comment/queryCommentByUserId	{"status": 200, "method": "POST", "path": "/comment/queryCommentByUserId", "query": "UserId=20", "ip": "::1", "errors": "", "cost": "1.0268ms"}
+[2023-05-13T14:21:01.261+0800]	[ INFO]	[             myblog/main.go:73]	5秒超时退出
+[2023-05-13T14:21:01.261+0800]	[ INFO]	[             myblog/main.go:76]	服务器关闭
